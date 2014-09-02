@@ -1,0 +1,128 @@
+% Festlegen des Dokumententyps
+\documentclass[a4paper,twoside]{article}
+
+% Papierformat
+\usepackage{a4}
+
+% Deutsche Sprache (Silbentrennung, usw.)
+\usepackage[ngerman]{babel}
+
+% Schrifteneinstellungen
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+% bessere Matheunterstützung
+\usepackage{amsfonts}
+\usepackage{amstext}
+\usepackage{amsmath}
+\usepackage{empheq}
+
+% Kodierung
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+% Grafiken einbinden
+\usepackage{graphicx}
+\usepackage{color}
+
+% Floats inside Floats
+\usepackage{subfig}
+
+% Prevent Floating outside of Section
+\usepackage[section]{placeins}
+
+% Nice Header
+\usepackage{fancyhdr}
+
+% Clickable URLs and references
+\usepackage{hyperref}
+
+% Bibliography
+\usepackage[comma,sort&compress]{natbib}
+
+% Proper units
+\usepackage{units}
+
+% Custom packages
+% Nicer paragraphs
+\parskip 12pt
+\parindent 0pt
+\renewcommand{\arraystretch}{1.2}
+\newcommand{\degree}{\ensuremath{^{\circ}}}
+\newcommand{\D}[1]{\ensuremath{\mathrm{d}#1}}
+\newcommand{\Dfrac}[2]{\ensuremath{\frac{\mathrm{d}#1}{\mathrm{d}#2}}}
+\newcommand{\mensch}[1]{\textsc{#1}}
+\newcommand{\T}{\textstyle}
+\newcommand{\sym}[1]{$ #1 $}
+\newcommand{\ret}{$[\hookleftarrow]$}
+\newcommand{\q}[1]{\glqq{#1}\grqq}
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+
+%
+\begin{document}
+
+\begin{titlepage}
+\includegraphics[height=2cm]{georg} \hfill
+
+\normalsize
+
+\vspace{5cm}
+
+\begin{center}
+\Large Physikalisches A-Praktikum \\
+\Huge Versuch 12 \\[5mm]
+{\bf Die spezifische Elektronenladung $\nicefrac{e}{m_e}$}
+\end{center}
+
+\normalsize
+
+\begin{table}[!h]
+\begin{center}
+\subfloat{
+  \begin{tabular}{ll}
+  Praktikanten: &Julius Strake\\
+  &Niklas Bölter\\
+  Gruppe: &B006\\
+  \end{tabular}
+}
+\subfloat{
+  \begin{tabular}{ll}
+  Betreuer: &Johannes Schmidt\\
+  Durchgeführt: &14.09.2012\\
+  Unterschrift: &\hspace{3cm} \\
+  \cline{2-2}
+  \end{tabular}
+}
+\vspace{2.0cm}
+\begin{tabular}{lr}
+  E-Mail: & \ttfamily niklas.boelter@stud.uni-goettingen.de\\
+          & \ttfamily julius.strake@stud.uni-goettingen.de\\
+\end{tabular}
+\end{center}
+\end{table}
+\end{titlepage}
+\pagestyle{empty}
+\clearpage\markboth{}{}\cleardoublepage
+\pagestyle{empty}
+\tableofcontents
+\newpage
+\pagestyle{headings}
+\section{Einleitung}
+\input{Einleitung}
+\section{Theorie}
+\input{Theorie}
+\section{Durchführung}
+\input{Durchfuehrung}
+\section{Auswertung}
+\input{Auswertung} 
+\section{Diskussion}
+\input{Diskussion} 
+\appendix
+\newpage
+\section{Tabellen und Grafiken}
+\input{Tabellen} 
+\bibliographystyle{dinat}
+\newpage
+\bibliography{../Shared/bibliography.bib}
+\end{document} 

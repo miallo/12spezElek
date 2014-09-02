@@ -1,0 +1,1443 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     52906,       1434]
+NotebookOptionsPosition[     51389,       1378]
+NotebookOutlinePosition[     51744,       1394]
+CellTagsIndexPosition[     51701,       1391]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"KI", "[", 
+   RowBox[{"r_", ",", "R_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"Integrate", "[", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"16", "*", "r", "*", "R"}], 
+         RowBox[{
+          RowBox[{"8", "*", "r", "*", "R"}], "-", 
+          RowBox[{"4", "*", 
+           SuperscriptBox["r", "2"]}], "-", 
+          RowBox[{"5", "*", 
+           SuperscriptBox["R", "2"]}]}]], "*", 
+        SuperscriptBox[
+         RowBox[{"Sin", "[", "a", "]"}], "2"]}]}], ")"}], 
+     RowBox[{
+      RowBox[{"-", "1"}], "/", "2"}]], ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "0", ",", 
+      RowBox[{"\[Pi]", "/", "2"}]}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.557158148161598*^9, 3.557158291474107*^9}, {
+  3.557158325390729*^9, 3.5571583388974323`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EI", "[", 
+   RowBox[{"r_", ",", "R_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"Integrate", "[", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"16", "*", "r", "*", "R"}], 
+         RowBox[{
+          RowBox[{"8", "*", "r", "*", "R"}], "-", 
+          RowBox[{"4", "*", 
+           SuperscriptBox["r", "2"]}], "-", 
+          RowBox[{"5", "*", 
+           SuperscriptBox["R", "2"]}]}]], "*", 
+        SuperscriptBox[
+         RowBox[{"Sin", "[", "a", "]"}], "2"]}]}], ")"}], 
+     RowBox[{"1", "/", "2"}]], ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "0", ",", 
+      RowBox[{"\[Pi]", "/", "2"}]}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.557158240396215*^9, 3.557158254028603*^9}, {
+  3.557158285561923*^9, 3.557158287954833*^9}, {3.557158327223303*^9, 
+  3.557158330514699*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"B", "[", 
+   RowBox[{"r_", ",", "R_", ",", "n_", ",", "I_"}], "]"}], ":=", 
+  RowBox[{
+   FractionBox["2", "\[Pi]"], "4", "\[Pi]", "*", 
+   SuperscriptBox["10", 
+    RowBox[{"-", "7"}]], "*", "1", "*", "n", "*", "I", "*", 
+   FractionBox[
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"4", 
+         SuperscriptBox["r", "2"]}], "+", 
+        RowBox[{"8", "*", "r", "*", "R"}], "+", 
+        RowBox[{"5", "*", 
+         SuperscriptBox["R", "2"]}]}], ")"}], "*", 
+      RowBox[{"KI", "[", 
+       RowBox[{"r", ",", "R"}], "]"}]}], "-", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"4", "*", 
+         SuperscriptBox["r", "2"]}], "-", 
+        RowBox[{"3", "*", 
+         SuperscriptBox["R", "2"]}]}], ")"}], 
+      RowBox[{"EI", "[", 
+       RowBox[{"r", ",", "R"}], "]"}]}]}], 
+    RowBox[{
+     SqrtBox[
+      RowBox[{
+       RowBox[{"4", "*", 
+        SuperscriptBox["r", "2"]}], "-", 
+       RowBox[{"8", "*", "r", "*", "R"}], "+", 
+       RowBox[{"5", "*", 
+        SuperscriptBox["R", "2"]}]}]], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"4", "*", 
+        RowBox[{"r", "^", "2"}]}], "+", 
+       RowBox[{"8", "*", "r", "*", "R"}], "+", 
+       RowBox[{"5", "*", 
+        SuperscriptBox["R", "2"]}]}], ")"}]}]]}]}]], "Input",
+ CellChangeTimes->{{3.55715835087175*^9, 3.557158586445003*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"XX", " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"0.063", ",", "0.55"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.0545", ",", "0.614"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.0485", ",", "0.678"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.0445", ",", "0.742"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.04", ",", "0.806"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.0375", ",", "0.87"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.0345", ",", "0.934"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.032", ",", "0.998"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.059", ",", "0.45"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.05", ",", "0.525"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.0435", ",", "0.6"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.038", ",", "0.675"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.034", ",", "0.75"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.031", ",", "0.825"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.028", ",", "0.9"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.045", ",", "0.575"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.0485", ",", "0.575"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.0525", ",", "0.575"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.056", ",", "0.575"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.059", ",", "0.575"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.062", ",", "0.575"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.054", ",", "0.575"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.035", ",", "0.725"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.0435", ",", "0.725"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.041", ",", "0.725"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.043", ",", "0.725"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.0455", ",", "0.725"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.047", ",", "0.725"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.0495", ",", "0.725"}], "}"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.557158588414727*^9, 3.5571585907521467`*^9}, {
+  3.5571587443940983`*^9, 3.5571587505064774`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0.063`", ",", "0.55`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.0545`", ",", "0.614`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.0485`", ",", "0.678`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.0445`", ",", "0.742`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.04`", ",", "0.806`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.0375`", ",", "0.87`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.0345`", ",", "0.934`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.032`", ",", "0.998`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.059`", ",", "0.45`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.05`", ",", "0.525`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.0435`", ",", "0.6`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.038`", ",", "0.675`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.034`", ",", "0.75`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.031`", ",", "0.825`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.028`", ",", "0.9`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.045`", ",", "0.575`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.0485`", ",", "0.575`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.0525`", ",", "0.575`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.056`", ",", "0.575`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.059`", ",", "0.575`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.062`", ",", "0.575`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.054`", ",", "0.575`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.035`", ",", "0.725`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.0435`", ",", "0.725`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.041`", ",", "0.725`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.043`", ",", "0.725`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.0455`", ",", "0.725`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.047`", ",", "0.725`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.0495`", ",", "0.725`"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.557158752453238*^9, 3.557158967523055*^9, 
+  3.558192792407206*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"BM", "[", "data_", "]"}], " ", ":=", 
+  RowBox[{"B", "[", 
+   RowBox[{
+    RowBox[{"data", "[", 
+     RowBox[{"[", "1", "]"}], "]"}], ",", " ", "0.122", ",", " ", "200", ",", 
+    " ", 
+    RowBox[{"data", "[", 
+     RowBox[{"[", "2", "]"}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.557158767181905*^9, 3.557158843203369*^9}, {
+  3.5571589309519453`*^9, 3.557158956071308*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"sd", " ", "=", " ", "0.0021"}]], "Input",
+ CellChangeTimes->{{3.558191920429179*^9, 3.5581919260741158`*^9}}],
+
+Cell[BoxData["0.0021`"], "Output",
+ CellChangeTimes->{3.5581919379657173`*^9, 3.558192792555419*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"sa", " ", "=", " ", "0.0125"}]], "Input",
+ CellChangeTimes->{{3.558191945053872*^9, 3.558191953554043*^9}}],
+
+Cell[BoxData["0.0125`"], "Output",
+ CellChangeTimes->{3.558191955899028*^9, 3.5581927925909033`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"sBM", "[", "data_", "]"}], ":=", " ", 
+  RowBox[{
+   RowBox[{"\[Sqrt]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"4.409999999999999`*^-6", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+          FractionBox[
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+               RowBox[{"0.976`", " ", "a"}], "+", 
+               RowBox[{"4", " ", 
+                SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+             RowBox[{
+              SubsuperscriptBox["\[Integral]", "0", 
+               FractionBox["\[Pi]", "2"]], 
+              RowBox[{
+               FractionBox["1", 
+                SqrtBox[
+                 RowBox[{"1", "-", 
+                  FractionBox[
+                   RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                   RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]]], 
+               RowBox[{"\[DifferentialD]", "a"}]}]}]}], "-", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "0.044652`"}], "+", 
+               RowBox[{"4", " ", 
+                SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+             RowBox[{
+              SubsuperscriptBox["\[Integral]", "0", 
+               FractionBox["\[Pi]", "2"]], 
+              RowBox[{
+               SqrtBox[
+                RowBox[{"1", "-", 
+                 FractionBox[
+                  RowBox[{"1.952`", " ", "a", " ", 
+                   SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                  RowBox[{
+                   RowBox[{"-", "0.07442`"}], "+", 
+                   RowBox[{"0.976`", " ", "a"}], "-", 
+                   RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]], 
+               RowBox[{"\[DifferentialD]", "a"}]}]}]}]}], 
+           RowBox[{"6250", " ", 
+            SqrtBox[
+             RowBox[{"0.07442`", "\[VeryThinSpace]", "-", 
+              RowBox[{"0.976`", " ", "a"}], "+", 
+              RowBox[{"4", " ", 
+               SuperscriptBox["a", "2"]}]}]], " ", 
+            RowBox[{"(", 
+             RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+              RowBox[{"0.976`", " ", "a"}], "+", 
+              RowBox[{"4", " ", 
+               SuperscriptBox["a", "2"]}]}], ")"}]}]]}], ")"}], "2"]}], "+", 
+      RowBox[{"0.00015625000000000003`", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox[
+           RowBox[{"d", " ", 
+            RowBox[{"(", 
+             RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"0.976`", "\[VeryThinSpace]", "+", 
+                 RowBox[{"8", " ", "a"}]}], ")"}], " ", 
+               RowBox[{
+                SubsuperscriptBox["\[Integral]", "0", 
+                 FractionBox["\[Pi]", "2"]], 
+                RowBox[{
+                 FractionBox["1", 
+                  SqrtBox[
+                   RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                    RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]]], 
+                 RowBox[{"\[DifferentialD]", "a"}]}]}]}], "-", 
+              RowBox[{"8", " ", "a", " ", 
+               RowBox[{
+                SubsuperscriptBox["\[Integral]", "0", 
+                 FractionBox["\[Pi]", "2"]], 
+                RowBox[{
+                 SqrtBox[
+                  RowBox[{"1", "-", 
+                   FractionBox[
+                    RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                    RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]], 
+                 RowBox[{"\[DifferentialD]", "a"}]}]}]}]}], ")"}]}], 
+           RowBox[{"6250", " ", 
+            SqrtBox[
+             RowBox[{"0.07442`", "\[VeryThinSpace]", "-", 
+              RowBox[{"0.976`", " ", "a"}], "+", 
+              RowBox[{"4", " ", 
+               SuperscriptBox["a", "2"]}]}]], " ", 
+            RowBox[{"(", 
+             RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+              RowBox[{"0.976`", " ", "a"}], "+", 
+              RowBox[{"4", " ", 
+               SuperscriptBox["a", "2"]}]}], ")"}]}]], "-", 
+          FractionBox[
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"0.976`", "\[VeryThinSpace]", "+", 
+              RowBox[{"8", " ", "a"}]}], ")"}], " ", "d", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+                 RowBox[{"0.976`", " ", "a"}], "+", 
+                 RowBox[{"4", " ", 
+                  SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+               RowBox[{
+                SubsuperscriptBox["\[Integral]", "0", 
+                 FractionBox["\[Pi]", "2"]], 
+                RowBox[{
+                 FractionBox["1", 
+                  SqrtBox[
+                   RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                    RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]]], 
+                 RowBox[{"\[DifferentialD]", "a"}]}]}]}], "-", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "0.044652`"}], "+", 
+                 RowBox[{"4", " ", 
+                  SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+               RowBox[{
+                SubsuperscriptBox["\[Integral]", "0", 
+                 FractionBox["\[Pi]", "2"]], 
+                RowBox[{
+                 SqrtBox[
+                  RowBox[{"1", "-", 
+                   FractionBox[
+                    RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                    RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]], 
+                 RowBox[{"\[DifferentialD]", "a"}]}]}]}]}], ")"}]}], 
+           RowBox[{"6250", " ", 
+            SqrtBox[
+             RowBox[{"0.07442`", "\[VeryThinSpace]", "-", 
+              RowBox[{"0.976`", " ", "a"}], "+", 
+              RowBox[{"4", " ", 
+               SuperscriptBox["a", "2"]}]}]], " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+               RowBox[{"0.976`", " ", "a"}], "+", 
+               RowBox[{"4", " ", 
+                SuperscriptBox["a", "2"]}]}], ")"}], "2"]}]], "-", 
+          FractionBox[
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "0.976`"}], "+", 
+              RowBox[{"8", " ", "a"}]}], ")"}], " ", "d", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+                 RowBox[{"0.976`", " ", "a"}], "+", 
+                 RowBox[{"4", " ", 
+                  SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+               RowBox[{
+                SubsuperscriptBox["\[Integral]", "0", 
+                 FractionBox["\[Pi]", "2"]], 
+                RowBox[{
+                 FractionBox["1", 
+                  SqrtBox[
+                   RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                    RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]]], 
+                 RowBox[{"\[DifferentialD]", "a"}]}]}]}], "-", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "0.044652`"}], "+", 
+                 RowBox[{"4", " ", 
+                  SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+               RowBox[{
+                SubsuperscriptBox["\[Integral]", "0", 
+                 FractionBox["\[Pi]", "2"]], 
+                RowBox[{
+                 SqrtBox[
+                  RowBox[{"1", "-", 
+                   FractionBox[
+                    RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                    RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]], 
+                 RowBox[{"\[DifferentialD]", "a"}]}]}]}]}], ")"}]}], 
+           RowBox[{"12500", " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{"0.07442`", "\[VeryThinSpace]", "-", 
+               RowBox[{"0.976`", " ", "a"}], "+", 
+               RowBox[{"4", " ", 
+                SuperscriptBox["a", "2"]}]}], ")"}], 
+             RowBox[{"3", "/", "2"}]], " ", 
+            RowBox[{"(", 
+             RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+              RowBox[{"0.976`", " ", "a"}], "+", 
+              RowBox[{"4", " ", 
+               SuperscriptBox["a", "2"]}]}], ")"}]}]]}], ")"}], "2"]}]}], 
+     ")"}]}], "/.", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"a", "->", 
+      RowBox[{"data", "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+     RowBox[{"d", " ", "\[Rule]", " ", 
+      RowBox[{"data", "[", 
+       RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.55819215264406*^9, 3.558192257560258*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"sBM", "[", 
+  RowBox[{"{", 
+   RowBox[{"0.063", ",", "0.55"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.558192259659123*^9, 3.5581922743227873`*^9}}],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{3.558192346553871*^9, 3.5581927934515333`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", 
+  RowBox[{"a", ",", "d"}], "]"}]], "Input",
+ CellChangeTimes->{{3.558192379529537*^9, 3.558192384366488*^9}}],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", "0", 
+    FractionBox["\[Pi]", "2"]], 
+   RowBox[{
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{"1", "-", 
+       FractionBox[
+        RowBox[{"1.952`", " ", "a", " ", 
+         SuperscriptBox[
+          RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+        RowBox[{
+         RowBox[{"-", "0.07442`"}], "+", 
+         RowBox[{"0.976`", " ", "a"}], "-", 
+         RowBox[{"4", " ", 
+          SuperscriptBox["a", "2"]}]}]]}]]], 
+    RowBox[{"\[DifferentialD]", "a"}]}]}],
+  FontSize->18]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sqrt", "[", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{"B", "[", 
+         RowBox[{"a", ",", " ", "0.122", ",", "200", ",", " ", "0.55"}], 
+         "]"}], ",", "a"}], "]"}], "*", "sa"}], ")"}], "2"], "+", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{"B", "[", 
+         RowBox[{"0.063", ",", " ", "0.122", ",", "200", ",", " ", "d"}], 
+         "]"}], ",", "d"}], "]"}], "*", "sd"}], ")"}], "2"]}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.558191748056766*^9, 3.558191771719531*^9}, {
+  3.558191828062212*^9, 3.55819191873291*^9}, {3.558191984038446*^9, 
+  3.558192020697638*^9}, {3.558192498167471*^9, 3.558192502996357*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[Sqrt]", 
+  RowBox[{"(", 
+   RowBox[{"8.859652119893936`*^-12", "+", 
+    RowBox[{"0.00015625000000000003`", " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"0.00008800000000000001`", " ", 
+          RowBox[{"(", 
+           RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"0.976`", "\[VeryThinSpace]", "+", 
+               RowBox[{"8", " ", "a"}]}], ")"}], " ", 
+             RowBox[{
+              SubsuperscriptBox["\[Integral]", "0", 
+               FractionBox["\[Pi]", "2"]], 
+              RowBox[{
+               FractionBox["1", 
+                SqrtBox[
+                 RowBox[{"1", "-", 
+                  FractionBox[
+                   RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                   RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]]], 
+               RowBox[{"\[DifferentialD]", "a"}]}]}]}], "-", 
+            RowBox[{"8", " ", "a", " ", 
+             RowBox[{
+              SubsuperscriptBox["\[Integral]", "0", 
+               FractionBox["\[Pi]", "2"]], 
+              RowBox[{
+               SqrtBox[
+                RowBox[{"1", "-", 
+                 FractionBox[
+                  RowBox[{"1.952`", " ", "a", " ", 
+                   SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                  RowBox[{
+                   RowBox[{"-", "0.07442`"}], "+", 
+                   RowBox[{"0.976`", " ", "a"}], "-", 
+                   RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]], 
+               RowBox[{"\[DifferentialD]", "a"}]}]}]}]}], ")"}]}], 
+         RowBox[{
+          SqrtBox[
+           RowBox[{"0.07442`", "\[VeryThinSpace]", "-", 
+            RowBox[{"0.976`", " ", "a"}], "+", 
+            RowBox[{"4", " ", 
+             SuperscriptBox["a", "2"]}]}]], " ", 
+          RowBox[{"(", 
+           RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+            RowBox[{"0.976`", " ", "a"}], "+", 
+            RowBox[{"4", " ", 
+             SuperscriptBox["a", "2"]}]}], ")"}]}]], "-", 
+        FractionBox[
+         RowBox[{"0.00008800000000000001`", " ", 
+          RowBox[{"(", 
+           RowBox[{"0.976`", "\[VeryThinSpace]", "+", 
+            RowBox[{"8", " ", "a"}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+               RowBox[{"0.976`", " ", "a"}], "+", 
+               RowBox[{"4", " ", 
+                SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+             RowBox[{
+              SubsuperscriptBox["\[Integral]", "0", 
+               FractionBox["\[Pi]", "2"]], 
+              RowBox[{
+               FractionBox["1", 
+                SqrtBox[
+                 RowBox[{"1", "-", 
+                  FractionBox[
+                   RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                   RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]]], 
+               RowBox[{"\[DifferentialD]", "a"}]}]}]}], "-", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "0.044652`"}], "+", 
+               RowBox[{"4", " ", 
+                SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+             RowBox[{
+              SubsuperscriptBox["\[Integral]", "0", 
+               FractionBox["\[Pi]", "2"]], 
+              RowBox[{
+               SqrtBox[
+                RowBox[{"1", "-", 
+                 FractionBox[
+                  RowBox[{"1.952`", " ", "a", " ", 
+                   SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                  RowBox[{
+                   RowBox[{"-", "0.07442`"}], "+", 
+                   RowBox[{"0.976`", " ", "a"}], "-", 
+                   RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]], 
+               RowBox[{"\[DifferentialD]", "a"}]}]}]}]}], ")"}]}], 
+         RowBox[{
+          SqrtBox[
+           RowBox[{"0.07442`", "\[VeryThinSpace]", "-", 
+            RowBox[{"0.976`", " ", "a"}], "+", 
+            RowBox[{"4", " ", 
+             SuperscriptBox["a", "2"]}]}]], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+             RowBox[{"0.976`", " ", "a"}], "+", 
+             RowBox[{"4", " ", 
+              SuperscriptBox["a", "2"]}]}], ")"}], "2"]}]], "-", 
+        FractionBox[
+         RowBox[{"0.000044000000000000006`", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "0.976`"}], "+", 
+            RowBox[{"8", " ", "a"}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+               RowBox[{"0.976`", " ", "a"}], "+", 
+               RowBox[{"4", " ", 
+                SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+             RowBox[{
+              SubsuperscriptBox["\[Integral]", "0", 
+               FractionBox["\[Pi]", "2"]], 
+              RowBox[{
+               FractionBox["1", 
+                SqrtBox[
+                 RowBox[{"1", "-", 
+                  FractionBox[
+                   RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                   RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]]], 
+               RowBox[{"\[DifferentialD]", "a"}]}]}]}], "-", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "0.044652`"}], "+", 
+               RowBox[{"4", " ", 
+                SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+             RowBox[{
+              SubsuperscriptBox["\[Integral]", "0", 
+               FractionBox["\[Pi]", "2"]], 
+              RowBox[{
+               SqrtBox[
+                RowBox[{"1", "-", 
+                 FractionBox[
+                  RowBox[{"1.952`", " ", "a", " ", 
+                   SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                  RowBox[{
+                   RowBox[{"-", "0.07442`"}], "+", 
+                   RowBox[{"0.976`", " ", "a"}], "-", 
+                   RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]], 
+               RowBox[{"\[DifferentialD]", "a"}]}]}]}]}], ")"}]}], 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"0.07442`", "\[VeryThinSpace]", "-", 
+             RowBox[{"0.976`", " ", "a"}], "+", 
+             RowBox[{"4", " ", 
+              SuperscriptBox["a", "2"]}]}], ")"}], 
+           RowBox[{"3", "/", "2"}]], " ", 
+          RowBox[{"(", 
+           RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+            RowBox[{"0.976`", " ", "a"}], "+", 
+            RowBox[{"4", " ", 
+             SuperscriptBox["a", "2"]}]}], ")"}]}]]}], ")"}], "2"]}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.55819179352977*^9, 3.558191835757306*^9, 
+  3.5581919349067163`*^9, 3.558192139036748*^9, 3.558192608578445*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"\[Sqrt]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"4.409999999999999`*^-6", " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+         FractionBox[
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+              RowBox[{"0.976`", " ", "a"}], "+", 
+              RowBox[{"4", " ", 
+               SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+            RowBox[{
+             SubsuperscriptBox["\[Integral]", "0", 
+              FractionBox["\[Pi]", "2"]], 
+             RowBox[{
+              FractionBox["1", 
+               SqrtBox[
+                RowBox[{"1", "-", 
+                 FractionBox[
+                  RowBox[{"1.952`", " ", "a", " ", 
+                   SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                  RowBox[{
+                   RowBox[{"-", "0.07442`"}], "+", 
+                   RowBox[{"0.976`", " ", "a"}], "-", 
+                   RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]]], 
+              RowBox[{"\[DifferentialD]", "a"}]}]}]}], "-", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "0.044652`"}], "+", 
+              RowBox[{"4", " ", 
+               SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+            RowBox[{
+             SubsuperscriptBox["\[Integral]", "0", 
+              FractionBox["\[Pi]", "2"]], 
+             RowBox[{
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{"1.952`", " ", "a", " ", 
+                  SuperscriptBox[
+                   RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                 RowBox[{
+                  RowBox[{"-", "0.07442`"}], "+", 
+                  RowBox[{"0.976`", " ", "a"}], "-", 
+                  RowBox[{"4", " ", 
+                   SuperscriptBox["a", "2"]}]}]]}]], 
+              RowBox[{"\[DifferentialD]", "a"}]}]}]}]}], 
+          RowBox[{"6250", " ", 
+           SqrtBox[
+            RowBox[{"0.07442`", "\[VeryThinSpace]", "-", 
+             RowBox[{"0.976`", " ", "a"}], "+", 
+             RowBox[{"4", " ", 
+              SuperscriptBox["a", "2"]}]}]], " ", 
+           RowBox[{"(", 
+            RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+             RowBox[{"0.976`", " ", "a"}], "+", 
+             RowBox[{"4", " ", 
+              SuperscriptBox["a", "2"]}]}], ")"}]}]]}], ")"}], "2"]}], "+", 
+     RowBox[{"0.00015625000000000003`", " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"d", " ", 
+           RowBox[{"(", 
+            RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"0.976`", "\[VeryThinSpace]", "+", 
+                RowBox[{"8", " ", "a"}]}], ")"}], " ", 
+              RowBox[{
+               SubsuperscriptBox["\[Integral]", "0", 
+                FractionBox["\[Pi]", "2"]], 
+               RowBox[{
+                FractionBox["1", 
+                 SqrtBox[
+                  RowBox[{"1", "-", 
+                   FractionBox[
+                    RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                    RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]]], 
+                RowBox[{"\[DifferentialD]", "a"}]}]}]}], "-", 
+             RowBox[{"8", " ", "a", " ", 
+              RowBox[{
+               SubsuperscriptBox["\[Integral]", "0", 
+                FractionBox["\[Pi]", "2"]], 
+               RowBox[{
+                SqrtBox[
+                 RowBox[{"1", "-", 
+                  FractionBox[
+                   RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                   RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]], 
+                RowBox[{"\[DifferentialD]", "a"}]}]}]}]}], ")"}]}], 
+          RowBox[{"6250", " ", 
+           SqrtBox[
+            RowBox[{"0.07442`", "\[VeryThinSpace]", "-", 
+             RowBox[{"0.976`", " ", "a"}], "+", 
+             RowBox[{"4", " ", 
+              SuperscriptBox["a", "2"]}]}]], " ", 
+           RowBox[{"(", 
+            RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+             RowBox[{"0.976`", " ", "a"}], "+", 
+             RowBox[{"4", " ", 
+              SuperscriptBox["a", "2"]}]}], ")"}]}]], "-", 
+         FractionBox[
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"0.976`", "\[VeryThinSpace]", "+", 
+             RowBox[{"8", " ", "a"}]}], ")"}], " ", "d", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+                RowBox[{"0.976`", " ", "a"}], "+", 
+                RowBox[{"4", " ", 
+                 SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+              RowBox[{
+               SubsuperscriptBox["\[Integral]", "0", 
+                FractionBox["\[Pi]", "2"]], 
+               RowBox[{
+                FractionBox["1", 
+                 SqrtBox[
+                  RowBox[{"1", "-", 
+                   FractionBox[
+                    RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                    RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]]], 
+                RowBox[{"\[DifferentialD]", "a"}]}]}]}], "-", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "0.044652`"}], "+", 
+                RowBox[{"4", " ", 
+                 SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+              RowBox[{
+               SubsuperscriptBox["\[Integral]", "0", 
+                FractionBox["\[Pi]", "2"]], 
+               RowBox[{
+                SqrtBox[
+                 RowBox[{"1", "-", 
+                  FractionBox[
+                   RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                   RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]], 
+                RowBox[{"\[DifferentialD]", "a"}]}]}]}]}], ")"}]}], 
+          RowBox[{"6250", " ", 
+           SqrtBox[
+            RowBox[{"0.07442`", "\[VeryThinSpace]", "-", 
+             RowBox[{"0.976`", " ", "a"}], "+", 
+             RowBox[{"4", " ", 
+              SuperscriptBox["a", "2"]}]}]], " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+              RowBox[{"0.976`", " ", "a"}], "+", 
+              RowBox[{"4", " ", 
+               SuperscriptBox["a", "2"]}]}], ")"}], "2"]}]], "-", 
+         FractionBox[
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "0.976`"}], "+", 
+             RowBox[{"8", " ", "a"}]}], ")"}], " ", "d", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+                RowBox[{"0.976`", " ", "a"}], "+", 
+                RowBox[{"4", " ", 
+                 SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+              RowBox[{
+               SubsuperscriptBox["\[Integral]", "0", 
+                FractionBox["\[Pi]", "2"]], 
+               RowBox[{
+                FractionBox["1", 
+                 SqrtBox[
+                  RowBox[{"1", "-", 
+                   FractionBox[
+                    RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                    RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]]], 
+                RowBox[{"\[DifferentialD]", "a"}]}]}]}], "-", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "0.044652`"}], "+", 
+                RowBox[{"4", " ", 
+                 SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+              RowBox[{
+               SubsuperscriptBox["\[Integral]", "0", 
+                FractionBox["\[Pi]", "2"]], 
+               RowBox[{
+                SqrtBox[
+                 RowBox[{"1", "-", 
+                  FractionBox[
+                   RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                   RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]], 
+                RowBox[{"\[DifferentialD]", "a"}]}]}]}]}], ")"}]}], 
+          RowBox[{"12500", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"0.07442`", "\[VeryThinSpace]", "-", 
+              RowBox[{"0.976`", " ", "a"}], "+", 
+              RowBox[{"4", " ", 
+               SuperscriptBox["a", "2"]}]}], ")"}], 
+            RowBox[{"3", "/", "2"}]], " ", 
+           RowBox[{"(", 
+            RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+             RowBox[{"0.976`", " ", "a"}], "+", 
+             RowBox[{"4", " ", 
+              SuperscriptBox["a", "2"]}]}], ")"}]}]]}], ")"}], "2"]}]}], 
+    ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.55819251643699*^9, 3.5581925167309837`*^9}}],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{3.558192683281424*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Simplify", "[", 
+  RowBox[{"\[Sqrt]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"4.409999999999999`*^-6", " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+         FractionBox[
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+              RowBox[{"0.976`", " ", "a"}], "+", 
+              RowBox[{"4", " ", 
+               SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+            RowBox[{
+             SubsuperscriptBox["\[Integral]", "0", 
+              FractionBox["\[Pi]", "2"]], 
+             RowBox[{
+              FractionBox["1", 
+               SqrtBox[
+                RowBox[{"1", "-", 
+                 FractionBox[
+                  RowBox[{"1.952`", " ", "a", " ", 
+                   SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                  RowBox[{
+                   RowBox[{"-", "0.07442`"}], "+", 
+                   RowBox[{"0.976`", " ", "a"}], "-", 
+                   RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]]], 
+              RowBox[{"\[DifferentialD]", "a"}]}]}]}], "-", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "0.044652`"}], "+", 
+              RowBox[{"4", " ", 
+               SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+            RowBox[{
+             SubsuperscriptBox["\[Integral]", "0", 
+              FractionBox["\[Pi]", "2"]], 
+             RowBox[{
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{"1.952`", " ", "a", " ", 
+                  SuperscriptBox[
+                   RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                 RowBox[{
+                  RowBox[{"-", "0.07442`"}], "+", 
+                  RowBox[{"0.976`", " ", "a"}], "-", 
+                  RowBox[{"4", " ", 
+                   SuperscriptBox["a", "2"]}]}]]}]], 
+              RowBox[{"\[DifferentialD]", "a"}]}]}]}]}], 
+          RowBox[{"6250", " ", 
+           SqrtBox[
+            RowBox[{"0.07442`", "\[VeryThinSpace]", "-", 
+             RowBox[{"0.976`", " ", "a"}], "+", 
+             RowBox[{"4", " ", 
+              SuperscriptBox["a", "2"]}]}]], " ", 
+           RowBox[{"(", 
+            RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+             RowBox[{"0.976`", " ", "a"}], "+", 
+             RowBox[{"4", " ", 
+              SuperscriptBox["a", "2"]}]}], ")"}]}]]}], ")"}], "2"]}], "+", 
+     RowBox[{"0.00015625000000000003`", " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"d", " ", 
+           RowBox[{"(", 
+            RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"0.976`", "\[VeryThinSpace]", "+", 
+                RowBox[{"8", " ", "a"}]}], ")"}], " ", 
+              RowBox[{
+               SubsuperscriptBox["\[Integral]", "0", 
+                FractionBox["\[Pi]", "2"]], 
+               RowBox[{
+                FractionBox["1", 
+                 SqrtBox[
+                  RowBox[{"1", "-", 
+                   FractionBox[
+                    RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                    RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]]], 
+                RowBox[{"\[DifferentialD]", "a"}]}]}]}], "-", 
+             RowBox[{"8", " ", "a", " ", 
+              RowBox[{
+               SubsuperscriptBox["\[Integral]", "0", 
+                FractionBox["\[Pi]", "2"]], 
+               RowBox[{
+                SqrtBox[
+                 RowBox[{"1", "-", 
+                  FractionBox[
+                   RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                   RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]], 
+                RowBox[{"\[DifferentialD]", "a"}]}]}]}]}], ")"}]}], 
+          RowBox[{"6250", " ", 
+           SqrtBox[
+            RowBox[{"0.07442`", "\[VeryThinSpace]", "-", 
+             RowBox[{"0.976`", " ", "a"}], "+", 
+             RowBox[{"4", " ", 
+              SuperscriptBox["a", "2"]}]}]], " ", 
+           RowBox[{"(", 
+            RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+             RowBox[{"0.976`", " ", "a"}], "+", 
+             RowBox[{"4", " ", 
+              SuperscriptBox["a", "2"]}]}], ")"}]}]], "-", 
+         FractionBox[
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"0.976`", "\[VeryThinSpace]", "+", 
+             RowBox[{"8", " ", "a"}]}], ")"}], " ", "d", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+                RowBox[{"0.976`", " ", "a"}], "+", 
+                RowBox[{"4", " ", 
+                 SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+              RowBox[{
+               SubsuperscriptBox["\[Integral]", "0", 
+                FractionBox["\[Pi]", "2"]], 
+               RowBox[{
+                FractionBox["1", 
+                 SqrtBox[
+                  RowBox[{"1", "-", 
+                   FractionBox[
+                    RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                    RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]]], 
+                RowBox[{"\[DifferentialD]", "a"}]}]}]}], "-", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "0.044652`"}], "+", 
+                RowBox[{"4", " ", 
+                 SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+              RowBox[{
+               SubsuperscriptBox["\[Integral]", "0", 
+                FractionBox["\[Pi]", "2"]], 
+               RowBox[{
+                SqrtBox[
+                 RowBox[{"1", "-", 
+                  FractionBox[
+                   RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                   RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]], 
+                RowBox[{"\[DifferentialD]", "a"}]}]}]}]}], ")"}]}], 
+          RowBox[{"6250", " ", 
+           SqrtBox[
+            RowBox[{"0.07442`", "\[VeryThinSpace]", "-", 
+             RowBox[{"0.976`", " ", "a"}], "+", 
+             RowBox[{"4", " ", 
+              SuperscriptBox["a", "2"]}]}]], " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+              RowBox[{"0.976`", " ", "a"}], "+", 
+              RowBox[{"4", " ", 
+               SuperscriptBox["a", "2"]}]}], ")"}], "2"]}]], "-", 
+         FractionBox[
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "0.976`"}], "+", 
+             RowBox[{"8", " ", "a"}]}], ")"}], " ", "d", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+                RowBox[{"0.976`", " ", "a"}], "+", 
+                RowBox[{"4", " ", 
+                 SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+              RowBox[{
+               SubsuperscriptBox["\[Integral]", "0", 
+                FractionBox["\[Pi]", "2"]], 
+               RowBox[{
+                FractionBox["1", 
+                 SqrtBox[
+                  RowBox[{"1", "-", 
+                   FractionBox[
+                    RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                    RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]]], 
+                RowBox[{"\[DifferentialD]", "a"}]}]}]}], "-", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "0.044652`"}], "+", 
+                RowBox[{"4", " ", 
+                 SuperscriptBox["a", "2"]}]}], ")"}], " ", 
+              RowBox[{
+               SubsuperscriptBox["\[Integral]", "0", 
+                FractionBox["\[Pi]", "2"]], 
+               RowBox[{
+                SqrtBox[
+                 RowBox[{"1", "-", 
+                  FractionBox[
+                   RowBox[{"1.952`", " ", "a", " ", 
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", "a", "]"}], "2"]}], 
+                   RowBox[{
+                    RowBox[{"-", "0.07442`"}], "+", 
+                    RowBox[{"0.976`", " ", "a"}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["a", "2"]}]}]]}]], 
+                RowBox[{"\[DifferentialD]", "a"}]}]}]}]}], ")"}]}], 
+          RowBox[{"12500", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"0.07442`", "\[VeryThinSpace]", "-", 
+              RowBox[{"0.976`", " ", "a"}], "+", 
+              RowBox[{"4", " ", 
+               SuperscriptBox["a", "2"]}]}], ")"}], 
+            RowBox[{"3", "/", "2"}]], " ", 
+           RowBox[{"(", 
+            RowBox[{"0.07442`", "\[VeryThinSpace]", "+", 
+             RowBox[{"0.976`", " ", "a"}], "+", 
+             RowBox[{"4", " ", 
+              SuperscriptBox["a", "2"]}]}], ")"}]}]]}], ")"}], "2"]}]}], 
+    ")"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.558192455348068*^9, 3.558192458905249*^9}}],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{3.558192483913328*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Map", "[", 
+  RowBox[{"BM", ",", " ", "XX"}], "]"}]], "Input",
+ CellChangeTimes->{{3.557158805522643*^9, 3.55715881017031*^9}}],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{
+  3.557158810745233*^9, {3.557158872152048*^9, 3.5571588810990477`*^9}, {
+   3.5571589183047323`*^9, 3.557158961132362*^9}, 3.557159114990428*^9, {
+   3.558192788540658*^9, 3.558192804288251*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"B", "[", 
+   RowBox[{"0", ",", "R", ",", "n", ",", "i"}], "]"}], "/", 
+  RowBox[{"(", 
+   RowBox[{"4", "\[Pi]", "*", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "7"}]]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.557160038282858*^9, 3.5571600591994677`*^9}, {
+  3.557160098713131*^9, 3.557160106526342*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"8", " ", "i", " ", "n"}], 
+  RowBox[{"5", " ", 
+   SqrtBox["5"], " ", 
+   SqrtBox[
+    SuperscriptBox["R", "2"]]}]]], "Output",
+ CellChangeTimes->{{3.557160051801717*^9, 3.557160059786813*^9}, 
+   3.5571601072640057`*^9}]
+}, Open  ]]
+},
+WindowSize->{1052, 608},
+WindowMargins->{{66, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 5, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 883, 26, 50, "Input"],
+Cell[1443, 48, 908, 26, 50, "Input"],
+Cell[2354, 76, 1392, 44, 64, "Input"],
+Cell[CellGroupData[{
+Cell[3771, 124, 2210, 63, 73, "Input"],
+Cell[5984, 189, 2144, 62, 73, "Output"]
+}, Open  ]],
+Cell[8143, 254, 421, 11, 27, "Input"],
+Cell[CellGroupData[{
+Cell[8589, 269, 133, 2, 27, "Input"],
+Cell[8725, 273, 100, 1, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8862, 279, 131, 2, 27, "Input"],
+Cell[8996, 283, 100, 1, 27, "Output"]
+}, Open  ]],
+Cell[9111, 287, 10781, 265, 864, "Input"],
+Cell[CellGroupData[{
+Cell[19917, 556, 178, 4, 27, "Input"],
+Cell[20098, 562, 101, 1, 27, "Output"]
+}, Open  ]],
+Cell[20214, 566, 147, 3, 27, "Input"],
+Cell[20364, 571, 569, 19, 101, "Input"],
+Cell[CellGroupData[{
+Cell[20958, 594, 792, 22, 33, "Input"],
+Cell[21753, 618, 7745, 193, 469, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29535, 816, 10279, 255, 838, "Input"],
+Cell[39817, 1073, 77, 1, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39931, 1079, 10277, 255, 850, "Input"],
+Cell[50211, 1336, 77, 1, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[50325, 1342, 151, 3, 27, "Input"],
+Cell[50479, 1347, 252, 4, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[50768, 1356, 342, 9, 33, "Input"],
+Cell[51113, 1367, 260, 8, 56, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

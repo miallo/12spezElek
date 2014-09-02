@@ -1,0 +1,161 @@
+% Von http://www.noch-mehr-davon.de/aprak.shtml geklaut!
+% Festlegen des Dokumententyps
+\documentclass[11pt,a4paper,twoside]{article}
+
+% Papierformat
+\usepackage{a4}
+
+% Deutsche Sprache (Silbentrennung, usw.)
+\usepackage[ngerman]{babel}
+
+% Schrifteneinstellungen
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+% bessere Matheunterstützung
+\usepackage{amsfonts}
+\usepackage{amstext}
+\usepackage{amsmath}
+
+% Kodierung
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+% Grafiken einbinden
+\usepackage{graphicx}
+\usepackage{color}
+
+% Floats inside Floats
+\usepackage{subfig}
+
+\usepackage[top=2cm, left=3cm, right=3cm, bottom=2cm]{geometry}
+% to change the page dimensions
+% this gives us a bit more space
+
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+
+% Proper units
+\usepackage{units}
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% Modifications
+\renewcommand{\arraystretch}{1.5} % Give tabular cells more vertical space
+
+% Einfach am Ende jeder Seite
+% \formular
+%und eventuell \newpage
+% schreiben - praktisch!
+
+\newcommand{\formular}{
+\begin{table}[!h]
+\subfloat{
+\begin{tabular}{ll}
+Praktikanten: &Julius Strake\\
+              &Niklas Bölter\\
+Gruppe: & 6 \\
+\end{tabular}
+}
+\subfloat{\hspace{2cm}}
+\subfloat{
+\begin{tabular}{ll}
+Betreuer: & Johannes Schmidt \\
+Datum: & 14.09.2012\\
+Unterschrift: &\hspace{3cm} \\
+\cline{2-2}
+\end{tabular}
+}
+\end{table}
+}
+
+%%% END Article customizations
+\begin{document}
+\section*{Messprotokoll}
+\subsection*{A-Praktikum \\ Versuch 12 - Die spezifische Elektronenladung $\nicefrac{e}{m_e}$}
+
+
+\begin{table}[!ht]
+  \caption*{Gerätespezifische Angaben}
+  \begin{center}
+  \begin{tabular}{| r | c | c || r | c | c |}
+    \hline
+    \hspace{0.6cm} [\hspace{1.0cm}] & \hspace{2.2cm} & \hspace{2.2cm} & \hspace{0.6cm} [\hspace{1.0cm}] & \hspace{2.2cm} & \hspace{2.2cm} \\
+    \hline
+     [\hspace{1.0cm}] & \hspace{2.2cm} & \hspace{2.2cm} & [\hspace{1.0cm}] & \hspace{2.2cm} & \hspace{2.2cm} \\
+    \hline
+     [\hspace{1.0cm}] & \hspace{2.2cm} & \hspace{2.2cm} & [\hspace{1.0cm}] & \hspace{2.2cm} & \hspace{2.2cm} \\
+    \hline
+  \end{tabular}
+  \end{center}
+\end{table}
+
+
+\subsubsection*{Messung 1 - Durchmesser der Elektronenkreisbahn}
+
+\begin{table}[!h]
+\begin{tabular}{|r|c|c|c|c|c|}
+\hline
+$U_B \; [\hspace{1cm}]$ & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} \\
+\hline
+$I \; [\hspace{1cm}]$ & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} \\
+\hline
+$d(U_B, I) \; [\hspace{1cm}]$ & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} \\
+\hline
+\hline
+$U_B \; [\hspace{1cm}]$ & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} \\
+\hline
+$I \; [\hspace{1cm}]$ & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} \\
+\hline
+$d(U_B, I) \; [\hspace{1cm}]$ & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} \\
+\hline
+\hline
+$U_B \; [\hspace{1cm}]$ & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} \\
+\hline
+$I \; [\hspace{1cm}]$ & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} \\
+\hline
+$d(U_B, I) \; [\hspace{1cm}]$ & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} \\
+\hline
+\hline
+$U_B \; [\hspace{1cm}]$ & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} \\
+\hline
+$I \; [\hspace{1cm}]$ & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} \\
+\hline
+$d(U_B, I) \; [\hspace{1cm}]$ & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} \\
+\hline
+\hline
+$U_B \; [\hspace{1cm}]$ & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} \\
+\hline
+$I \; [\hspace{1cm}]$ & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} \\
+\hline
+$d(U_B, I) \; [\hspace{1cm}]$ & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} \\
+\hline
+\hline
+$U_B \; [\hspace{1cm}]$ & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} \\
+\hline
+$I \; [\hspace{1cm}]$ & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} \\
+\hline
+$d(U_B, I) \; [\hspace{1cm}]$ & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} & \hspace{2cm} \\
+\hline
+\end{tabular}
+\end{table}
+\formular
+
+
+\end{document}

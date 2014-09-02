@@ -1,0 +1,45 @@
+\begin{figure}[htb]
+\begin{center}
+\def\svgwidth{10cm}
+\input{ergebnisse.tex}
+\end{center}
+\caption{Ergebnisse der Bestimmung der spezifischen Elektronenladung}
+\label{fig:ergebnisse}
+\end{figure}
+Da die Abweichung des ermittelten Wertes mit $7.3\,\%$ außerhalb des ermittelten Fehlerbereichs liegt, scheinen die verwendeten Abschätzungen unzureichend zu sein.
+
+Eine noch nicht betrachtete Fehlerquelle ist die Annahme des homogenen Magnetfeldes im Bereich des Glaskolbens.
+Diese Näherung führt zu einer recht großen Abweichung, wie die Berechnung des Wertes mit elliptischen Integralen\footnote{per Wolfram Mathematica$^\text{\textregistered}$} zeigt. Die dafür benötigten Formeln wurden der Praktikumsanleitung \citep[S.~108]{Anleitung} entnommen.
+Die relative Abweichung vom Literaturwert beträgt dann nur noch etwa $3.3\,\%$. Ein Vergleich der Ergebnisse ist in Abbildung~\ref{fig:ergebnisse} zu sehen. Auch gut zu erkennen ist die steigende Abweichung mit größerem Radius der Elektronenkreisbahn.
+%Eine Berechnung des Fehlers per Gaußscher Fehlerfortpflanzung\footnote{mit Hilfe von Wolfram Mathematica$^\text{\textregistered}$} ergibt einen maximalen Messfehler von $\unit[?]{A}$.
+Leider gestaltet sich die Berechnung der Gaußschen Fehlerfortpflanzung bei elliptischen Integralen äußerst schwierig, sodass darauf verzichtet werden musste.
+
+Eine weitere Möglichkeit, die spezifische Elektronenladung aus den Messwerten zu bestimmen, ist das graphische Auftragen der Messwerte (siehe Abb.~\ref{fig:dUI-Kackplot}) mit anschließendem Ablesen der Steigung.
+\begin{figure}[htb]
+\begin{center}
+\def\svgwidth{8cm}
+\input{edurchm}
+\end{center}
+\caption{Abhängigkeit des Elektronenstrahldurchmessers $d$ von dem Quotienten aus der Quadratwurzel der Spannung und der Stromstärke $\sqrt{U}/I$.}
+\label{fig:dUI-Kackplot}
+\end{figure}
+Aus den Formeln~\ref{eq:B-Feld} und~\ref{eq:SpezLad} kann dann durch einfaches Umstellen und Einsetzen der Steigung ein Wert für die spezifische Ladung bestimmt werden.
+Die relative Abweichung vom Literaturwert beträgt jedoch etwa $\unit[15.9]{\%}$.
+Diese Berechnungsmethode führt also vermutlich zu sehr viel schlechteren Werten als die Berechnung mit Hilfe der einzelnen Wertepaare und anschließender gewichteter Mittelung.
+
+Dies ist sehr erfreulich, da sich offenbar der sehr viel höhere Aufwand der anderen Methoden gelohnt hat.
+Zum Vergleich der drei verwendeten Verfahren untereinander und mit dem Literaturwert siehe auch Tabelle~\ref{tab:Vergleich}.
+
+Es fällt auf, dass die berechneten Werte unabhängig von der Rechenmethode eine Abweichung nach unten aufweisen.
+
+Es scheint also ein systematischer Fehler in der Messung vorzuliegen.
+Dieser könnte zur Ursache haben, dass der Versatz der Längenskala zur Messung des Strahldurchmessers nur einmal gemessen wurde.
+Hier würde eine Abweichung des Messwertes nach oben die beobachteten Konsequenzen nach sich ziehen.
+In Frage käme außerdem noch ein schwächeres Magnetfeld als berechnet oder eine stärkere Spannung als gemessen.
+Letzteres ist aufgrund der hohen Genauigkeit der Multimeter jedoch recht unwahrscheinlich.
+
+
+Weiterhin könnte eine etwaige Brechung des Lichts durch den Glaskolben zu kleineren Ungenauigkeiten führen.
+Auch eine mögliche bei Verschiebung des Okulars auftretende kleine Drehung desselben um die vertikale Achse würde eine zusätzliche Abweichung zur Folge haben.
+
+Einer der Messwerte (für $U_\mathrm{B} = \unit[140]{V},\,I = \unit[725]{mA}$) fällt vollkommen aus der Reihe und ist in allen Diagrammen deutlich zu erkennen. Wenn man anstatt der notierten $\unit[11.4]{cm}$ jedoch $\unit[10.4]{cm}$ einsetzt, ergibt sich ein deutlich besserer Wert, der statt $\unit[25.2]{\%}$ nur um $\unit[4.4]{\%}$ abweicht. Hier ist den Experimentatoren also offenbar ein Fehler unterlaufen.
