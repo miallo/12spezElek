@@ -9,12 +9,12 @@ f(x)=m*x+b
 g(x)=a*x+c
 
 set fit logfile 'U140.log'
-fit f(x) 'Messwerte.txt' u (sqrt(140)/$1):2 via m,b
+fit f(x) 'Messwerte.txt' u (sqrt(140)/$1):(($2-38)/1000) via m,b
 
 set fit logfile 'U160.log'
-fit g(x) 'Messwerte.txt' u (sqrt(160)/$1):3 via a,c
+fit g(x) 'Messwerte.txt' u (sqrt(160)/$1):(($3-38)/1000) via a,c
 
-p 'Messwerte.txt' u (sqrt(160)/$1):3 t'U$_\text{B}$=160V', g(x) t'Regressionsgerade U=160V', 'Messwerte.txt' u (sqrt(140)/$1):2 t'U$_\text{B}=140V', f(x) t'U=140V'
+p 'Messwerte.txt' u (sqrt(160)/$1):(($3-38)/1000) t'U$_\text{B}$=160V', g(x) t'Regressionsgerade U=160V', 'Messwerte.txt' u (sqrt(140)/$1):(($2-38)/1000) t'U$_\text{B}$=140V', f(x) t'U=140V'
 
 set output
 !epstopdf UConst.eps
