@@ -1,9 +1,3 @@
-#-----------------------------------------------------------------
-QUELL=main.cpp
-PROG=main
-CC=g++
-CFLAGS=-Wall
-#-----------------------------------------------------------------
 all: Prohaupt.tex
 	pdflatex Prohaupt.tex
 	bibtex Prohaupt
