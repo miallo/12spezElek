@@ -190,23 +190,30 @@ Dies wird erreicht, dass die mit der Entfernung schwächer werdenden Felder sich
 
 \section{Durchführung}
 \label{sec:durchfuehrung}
+Es wird ein Glaskolben mit Restgas aufgebaut, in dem eine Glühkatode mit einer Anode befestigt ist.
+Ein Okular auf einer Messskala dient zur Vermessung des Bahnradius.
+Damit wird der Ausgang des Elektronenstrahls (der linke Rand) vermessen, sowie im weiteren Verlauf der rechte Rand.
+Man notiert vor den Messungen alle Spulendaten.\\
+Zunächst geht man in Schritten von $\Delta U_\text B=20\si{\volt}$ und $\Delta I=0.1\si{\ampere}$ grob die verschiedenen Einstellungen durch, um die überhaupt messbaren Bereiche einzuschränken.
+Aus diesen wählt man zwei Spulenströme, für die Messungen in einem möglichst großen Bereich von $U_\text B$ durchführbar sind.
+Für jeweils einen festen Parameter wird nun der andere systematisch untersucht.
+Die Gesamtzahl aller Messungen sollte mindestens 25 betragen.\\
+Abschließend müssen natürlich noch die angenommenen Fehler notiert werden.
+
+
 
 \section{Auswertung}
 \label{sec:auswertung}
 \begin{figure}[!h]
 	\centering
-	\input{UConst}
+	\input{UI}
 	\caption{Durchmesser des Kreises gegen $\sqrt{\frac{U_\text{B}}{1\text V}}/\frac{I_\text{H}}{1\text A}$}
-	\label{fig:UConst}
+	\label{fig:UI}
 \end{figure}
+In Abb. \ref{fig:UI} erkennt man einen linearen Zusammenhang.
+Dieser sollte sich auch nach Gleichung \eqref{eq:ui} ergeben.
 
 
-\begin{figure}[!h]
-	\centering
-	\input{spezelek}
-	\caption{Durchmesser des Kreises gegen $e/m_e$}
-	\label{fig:spezelek}
-\end{figure}
 
 \begin{table}[h!]
 	\centering
@@ -300,7 +307,9 @@ Dies wird erreicht, dass die mit der Entfernung schwächer werdenden Felder sich
 	  \caption{Messreihen}
 	  \label{tbl:pythonmessung}
   \end{table}
-  Insgesammt ergibt sich aus der Tabelle \ref{tbl:pythonmessung} ein gewichteter Mittelwert von $(1.7104 \pm 0.0096)\si{\coulomb/\kilo\gram}$.
+Insgesamt ergibt sich aus der Tabelle \ref{tbl:pythonmessung} ein gewichteter Mittelwert von $(1.7104 \pm 0.0096)\si{\coulomb/\kilo\gram}$ über alle Messungen.
+Dies ergibt eine Abweichung vom Literaturwert $1.7588\si{\coulomb/\kilo\gram}$ von $3\%$
+
 \begin{figure}[!h]
 	\centering
 	\input{eric}
@@ -308,18 +317,6 @@ Dies wird erreicht, dass die mit der Entfernung schwächer werdenden Felder sich
 	\label{fig:eric}
 \end{figure}
 
-\begin{figure}[!h]
-	\centering
-	\input{IConst}
-	\caption{Durchmesser des Kreises gegen $\sqrt{\frac{U_\text{B}}{1\text V}}/\frac{I_\text{H}}{1\text A}$}
-	\label{fig:IConst}
-\end{figure}
-\begin{figure}[!h]
-	\centering
-	\input{UI}
-	\caption{Durchmesser des Kreises gegen $\sqrt{\frac{U_\text{B}}{1\text V}}/\frac{I_\text{H}}{1\text A}$}
-	\label{fig:UConst}
-\end{figure}
 
 \section{Diskussion}
 \label{sec:diskussion}
