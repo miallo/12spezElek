@@ -209,19 +209,33 @@ Diese wird in kinetische Energie nach
 	E_\text{kin}=&\frac{1}{2}m_ev^2
 \end{align*}
 berechnet und es gilt mit $q=e$
-\begin{align*}
+\begin{align}
 	E_\text{kin}&=W=eU\\
-	\Rightarrow v&=\sqrt{2\frac{e}{m_e}U}\;.
-\end{align*}
+	\Rightarrow v&=\sqrt{2\frac{e}{m_e}U}\;. \label{eq:v}
+\end{align}
 \\
-
 Die Elektronen können nun mit den Helmholzspulen auf eine Kreisbahn gelenkt werden.
-Die Kraft, welche der Zentripetalkraft entgegen wirkt, ist die \emph{Lorentz-Kraft}.
+Die Kraft, welche der Zentripetalkraft $\vec F_Z$ entgegen wirkt, ist die \emph{Lorentz-Kraft} $\vec F_L$.
 Sie lautet nach \cite[S. 368]{gerthsen}
 \begin{align*}
-	\vec F=q\vec v\times\vec B\;.
+	\vec F_L=q\vec v\times\vec B
 \end{align*}
+während
+\begin{align}
+	F_Z=\frac{1}{r}m_ev^2\label{eq:zentri}
+\end{align}
 In einem Magnetfeld werden Elektronen also nach der rechten-Hand-Regel abgelenkt.
+Für $\vec B\perp \vec v$ gilt (da $\sin(\pi/2)=1$)
+\begin{align}
+	F=qvB\; . \label{eq:Lorenz}
+\end{align}
+\\
+Aus Gleichung \eqref{eq:zentri} und \eqref{eq:Lorenz} ergibt sich durch Gleichsetzen
+\begin{align}
+	\frac{1}{r}m_ev^2&=qvB\label{eq:ZgleichL}\\
+	\stackrel{\text{\eqref{eq:BHelm} und \eqref{eq:v}}}{\Rightarrow} \frac{e}{m_e}&=\frac{2R^2U}{\frac{64}{125}\mu_0^2n^2r^2I^2}
+\end{align}
+
 
 
 \section{Durchführung}
