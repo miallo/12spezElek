@@ -117,6 +117,9 @@
 \selectbiblanguage{ngerman}
 \bibliographystyle{babalpha-fl}
 
+%Links mit \href{www.abc.de}
+\usepackage{hyperref}
+
 \begin{document}
 \newpage
 \begin{titlepage}
@@ -165,6 +168,7 @@ Praktikant: &  Michael Lohmann\\
 \label{sec:einleitung}
 Die spezifische Elektronenladung beschreibt das Verhältnis von Elementarladung $e$ zur Masse des Elektrons $m_e$.
 Für viele Versuche müssen die einzelnen Größen der Beiden nicht bekannt sein, sondern die spezifische Elektronenladung reicht aus.
+Auch kann damit zum Beispiel aus dem Millikan-Versuch die Elektronenladung bestimmen.
 Diese Naturkonstante wurde bereits *************************************************** (\cite[S. ]{gerthsen}) entdeckt.
 
 \section{Theorie}
@@ -233,7 +237,7 @@ Für $\vec B\perp \vec v$ gilt (da $\sin(\pi/2)=1$)
 Aus Gleichung \eqref{eq:zentri} und \eqref{eq:Lorenz} ergibt sich durch Gleichsetzen
 \begin{align}
 	\frac{1}{r}m_ev^2&=qvB\label{eq:ZgleichL}\\
-	\stackrel{\text{\eqref{eq:BHelm} und \eqref{eq:v}}}{\Rightarrow} \frac{e}{m_e}&=\frac{2R^2U}{\frac{64}{125}\mu_0^2n^2r^2I^2}
+	\stackrel{\text{\eqref{eq:BHelm} und \eqref{eq:v}}}{\Rightarrow} \frac{e}{m_e}&=\frac{2R^2U}{\frac{64}{125}\mu_0^2n^2r^2I^2}\label{eq:em}
 \end{align}
 
 
@@ -261,16 +265,16 @@ Abschließend müssen natürlich noch die angenommenen Fehler notiert werden.
 	\label{fig:UI}
 \end{figure}
 In Abb. \ref{fig:UI} erkennt man einen linearen Zusammenhang.
-Dieser sollte sich auch nach Gleichung \eqref{eq:ui} ergeben.
+Dieser sollte sich auch nach Gleichung \eqref{eq:em} ergeben.
 
 
 
 \begin{table}[h!]
 	\centering
-	\begin{tabular}{|l|l|l|l|}
+	\begin{tabular}{|c|c|c|c|}
 		 \hline
 		 Spannung $U_B$\;[V] & Strom $I$\;[100 mA] & Radius $r$\;[mm] & $e/m_e$\;[$10^{11}\;$C\;kg$^{-1}$]\\
-		 \hline
+		 \hline\hline
 		 $120,0 \pm 0,5$ & $7,0 \pm 0,1$& $36,5 \pm 0,4$ & $1,78 \pm 0,06$\\
 		 \hline                         
 		 $130,0 \pm 0,5$ & $7,0 \pm 0,1$& $38,0 \pm 0,4$ & $1,78 \pm 0,06$\\
@@ -358,7 +362,7 @@ Dieser sollte sich auch nach Gleichung \eqref{eq:ui} ergeben.
 	  \label{tbl:pythonmessung}
   \end{table}
 Insgesamt ergibt sich aus der Tabelle \ref{tbl:pythonmessung} ein gewichteter Mittelwert von $(1.7104 \pm 0.0096)\si{\coulomb/\kilo\gram}$ über alle Messungen.
-Dies ergibt eine Abweichung vom Literaturwert $1.7588\si{\coulomb/\kilo\gram}$ von $3\%$
+Dies ergibt eine Abweichung vom Literaturwert\footnote{\url{http://physics.nist.gov/cgi-bin/cuu/Value?esme|search_for=electron+charge+to+mass, 11.9.2014, 14:15 Uhr}} $1.7588\si{\coulomb/\kilo\gram}$ von $3\%$
 
 \begin{figure}[!h]
 	\centering
