@@ -181,13 +181,25 @@ Um homogene elektrische Felder in guter Näherung zu erzeugen, kann man einen Pl
 Ein homogenes Magnetfeld zu erzeugen ist wesentlich anspruchsvoller. 
 Das hier verwendete \textsc{Helmholz}-Spulenpaar ist die wohl gebräuchlichste Lösung.
 Dafür wird nicht eine unendlich (oder zumindest sehr) lange Spule verwendet, sondern nur zwei relativ kleine.
-Diese sind in einer bestimmten Geometrie angeordnet, so dass sich auch mit ihnen gute Ergebnisse zumindest in kleinen Raumbereichen erzielen lassen.
-Nach \cite[S. 94]{demtroeder2} gilt
-\begin{align*}
-	B_0\approx\mu_0\mu_r\frac{8}{\sqrt {125}}\cdot\frac{nI}{R}
-\end{align*}
+Diese, welche für sich genommen nur ein inhomogenes Magnetfeld besitzen, sind in einer bestimmten Geometrie angeordnet, so dass sich auch mit ihnen gute Ergebnisse zumindest in kleinen Raumbereichen erzielen lassen.
+In einer Helmholzspule gilt nach \cite[S. 94, Gleichung 3.22c]{demtroeder2} für die Mitte der Spulen
+\begin{align}
+	B\approx\frac{8\mu_0I}{\sqrt{125}R}\label{eq:BHelm}
+\end{align}
 Dies wird erreicht, dass die mit der Entfernung schwächer werdenden Felder sich im Inneren des Paares idealerweise genau ausgleichen.
-Die sogenannte \textsc{Helmholz}bedingung
+Die sogenannte \textsc{Helmholz}-Bedingung beschreibt den Spulenabstand im Verhältnis zu ihrem Radius.
+Diese beiden Größen sollten im Idealfall die selben Dimensionen (jeweils $R$) haben.\\
+
+\subsection{Fadenstrahlrohr und Lorenz-Kraft}
+Ein Fadenstrahlrohr ist ein Aufbau, um einen Strahl an freien Elektronen zu erzeugen.
+Es besteht aus einer Kathode, welche wiederum eine Glühlampe ist, und einer Anode.
+Diese ist häufig eine Scheibe in deren Mitte ein Loch ist.
+Glimmt die Glühlampe, so erheizt sich der Draht, durch den Elektronen fließen.
+Legt man an die Lampe nun einen negativen Pol einer Spannungsquelle an und an die Kathode in einigem Abstand einen positiven, so werden sie Elektronen von der Glühlampe abgestoßen und zur Anode beschleunigt.
+Die meisten Elektronen treffen auf die Metallfläche und sorgen für einen Stromfluss.
+Ein Teil aber fliegt durch das Loch in der Mitte und kann als relativ feiner Elektronenstrahl für Versuche verwendet werden.
+
+
 
 \section{Durchführung}
 \label{sec:durchfuehrung}
