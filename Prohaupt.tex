@@ -117,6 +117,9 @@
 \selectbiblanguage{ngerman}
 \bibliographystyle{babalpha-fl}
 
+%Links mit \href{www.abc.de}
+\usepackage{hyperref}
+
 \begin{document}
 \newpage
 \begin{titlepage}
@@ -165,6 +168,7 @@ Praktikant: &  Michael Lohmann\\
 \label{sec:einleitung}
 Die spezifische Elektronenladung beschreibt das Verhältnis von Elementarladung $e$ zur Masse des Elektrons $m_e$.
 Für viele Versuche müssen die einzelnen Größen der Beiden nicht bekannt sein, sondern die spezifische Elektronenladung reicht aus.
+Auch kann damit zum Beispiel aus dem Millikan-Versuch die Elektronenladung bestimmen.
 Diese Naturkonstante wurde bereits *************************************************** (\cite[S. ]{gerthsen}) entdeckt.
 
 
@@ -176,43 +180,200 @@ es lautet:
 \begin{align*}
 	\vec F_\text{el}=\frac{qQ}{4\pi\varepsilon_0}\frac{\vec r-\vec r_\text{Q}}{|\vec r-\vec r_\text{Q}|^3}\qquad\text{und}\qquad\vec E =\frac{\vec F_\text{el}}{q}
 \end{align*}
+
+
 \subsection{Helmholzspulen}
 Um homogene elektrische Felder in guter Näherung zu erzeugen, kann man einen Plattenkondensator verwenden.
 Ein homogenes Magnetfeld zu erzeugen ist wesentlich anspruchsvoller. 
-Das hier verwendete \emph{Helmholz-Spulenpaar} ist die wohl gebräuchlichste Lösung.
+Das hier verwendete \textsc{Helmholz}-Spulenpaar ist die wohl gebräuchlichste Lösung.
 Dafür wird nicht eine unendlich (oder zumindest sehr) lange Spule verwendet, sondern nur zwei relativ kleine.
-Diese sind in einer bestimmten Geometrie angeordnet, so dass sich auch mit ihnen gute Ergebnisse zumindest in kleinen Raumbereichen erzielen lassen.
-Nach \cite[S. 94]{demtroeder2} gilt
+Diese, welche für sich genommen nur ein inhomogenes Magnetfeld besitzen, sind in einer bestimmten Geometrie angeordnet, so dass sich auch mit ihnen gute Ergebnisse zumindest in kleinen Raumbereichen erzielen lassen.
+In einer Helmholzspule gilt nach \cite[S. 94, Gleichung 3.22c]{demtroeder2} für die Mitte der Spulen
+\begin{align}
+	B\approx\frac{8\mu_0I}{\sqrt{125}R}\label{eq:BHelm}
+\end{align}
+Dies wird erreicht, dass die mit der Entfernung schwächer werdenden Felder sich im Inneren des Paares idealerweise genau ausgleichen.
+Die sogenannte \textsc{Helmholz}-Bedingung beschreibt den Spulenabstand im Verhältnis zu ihrem Radius.
+Diese beiden Größen sollten im Idealfall die selben Dimensionen (jeweils $R$) haben.\\
+
+\subsection{Fadenstrahlrohr und Lorenz-Kraft}
+Ein Fadenstrahlrohr ist ein Aufbau, um einen Strahl an freien Elektronen zu erzeugen.
+Es besteht aus einer Kathode, welche wiederum eine Glühlampe ist, und einer Anode.
+Diese ist häufig eine Scheibe in deren Mitte ein Loch ist.
+Glimmt die Glühlampe, so erheizt sich der Draht, durch den Elektronen fließen.
+Legt man an die Lampe nun einen negativen Pol einer Spannungsquelle an und an die Kathode in einigem Abstand einen positiven, so werden sie Elektronen von der Glühlampe abgestoßen und zur Anode beschleunigt.
+Die meisten Elektronen treffen auf die Metallfläche und sorgen für einen Stromfluss.
+Ein Teil aber fliegt durch das Loch in der Mitte und kann als relativ feiner Elektronenstrahl für Versuche verwendet werden.
+Wird dieser in einen bis auf ein Restgas evakuierten Glaszylinder geleitet, so kann man den Strahlenverlauf mit bloßem Auge verfolgen.
+Die Elektronen bekommen durch die Beschleunigung eine Energie von
 \begin{align*}
-	B_0\approx\mu_0\mu_r\frac{8}{\sqrt {125}}\cdot\frac{nI}{R}
+	E&=\frac{U}{d}\\
+	\Rightarrow W&=qEd=qU\; .
 \end{align*}
-Dies wird erreicht, dass die mit der entfernung schwächer werdenden Felder sich im Inneren des Paares idealerweise genau ausgleichen.
+Diese wird in kinetische Energie nach
+\begin{align*}
+	E_\text{kin}=&\frac{1}{2}m_ev^2
+\end{align*}
+berechnet und es gilt mit $q=e$
+\begin{align}
+	E_\text{kin}&=W=eU\\
+	\Rightarrow v&=\sqrt{2\frac{e}{m_e}U}\;. \label{eq:v}
+\end{align}
+\\
+Die Elektronen können nun mit den Helmholzspulen auf eine Kreisbahn gelenkt werden.
+Die Kraft, welche der Zentripetalkraft $\vec F_Z$ entgegen wirkt, ist die \emph{Lorentz-Kraft} $\vec F_L$.
+Sie lautet nach \cite[S. 368]{gerthsen}
+\begin{align*}
+	\vec F_L=q\vec v\times\vec B
+\end{align*}
+während
+\begin{align}
+	F_Z=\frac{1}{r}m_ev^2\label{eq:zentri}
+\end{align}
+In einem Magnetfeld werden Elektronen also nach der rechten-Hand-Regel abgelenkt.
+Für $\vec B\perp \vec v$ gilt (da $\sin(\pi/2)=1$)
+\begin{align}
+	F=qvB\; . \label{eq:Lorenz}
+\end{align}
+\\
+Aus Gleichung \eqref{eq:zentri} und \eqref{eq:Lorenz} ergibt sich durch Gleichsetzen
+\begin{align}
+	\frac{1}{r}m_ev^2&=qvB\label{eq:ZgleichL}\\
+	\stackrel{\text{\eqref{eq:BHelm} und \eqref{eq:v}}}{\Rightarrow} \frac{e}{m_e}&=\frac{2R^2U}{\frac{64}{125}\mu_0^2n^2r^2I^2}\label{eq:em}
+\end{align}
+
+
 
 \section{Durchführung}
 \label{sec:durchfuehrung}
+Es wird ein Glaskolben mit Restgas aufgebaut, in dem ein Fadenstrahlrohr befestigt ist.
+Ein Okular auf einer Messskala dient zur Vermessung des Bahnradius.
+Damit wird der Ausgang des Elektronenstrahls (der linke Rand) vermessen, sowie im weiteren Verlauf der rechte Rand.
+Man notiert vor den Messungen alle Spulendaten.\\
+Zunächst geht man in Schritten von $\Delta U_\text B=20\si{\volt}$ und $\Delta I=0.1\si{\ampere}$ grob die verschiedenen Einstellungen durch, um die überhaupt messbaren Bereiche einzuschränken.
+Aus diesen wählt man zwei Spulenströme, für die Messungen in einem möglichst großen Bereich von $U_\text B$ durchführbar sind.
+Für jeweils einen festen Parameter wird nun der andere systematisch untersucht.
+Die Gesamtzahl aller Messungen sollte mindestens 25 betragen.\\
+Abschließend müssen natürlich noch die angenommenen Fehler notiert werden.
+
+
 
 
 \section{Auswertung}
 \label{sec:auswertung}
 \begin{figure}[!h]
 	\centering
-	\input{UConst}
+	\input{UI}
 	\caption{Durchmesser des Kreises gegen $\sqrt{\frac{U_\text{B}}{1\text V}}/\frac{I_\text{H}}{1\text A}$}
-	\label{fig:UConst}
+	\label{fig:UI}
 \end{figure}
+In Abb. \ref{fig:UI} erkennt man einen linearen Zusammenhang.
+Dieser sollte sich auch nach Gleichung \eqref{eq:em} ergeben.
+
+
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		 \hline
+		 Spannung $U_B$\;[V] & Strom $I$\;[100 mA] & Radius $r$\;[mm] & $e/m_e$\;[$10^{11}\;$C\;kg$^{-1}$]\\
+		 \hline\hline
+		 $120,0 \pm 0,5$ & $7,0 \pm 0,1$& $36,5 \pm 0,4$ & $1,78 \pm 0,06$\\
+		 \hline                         
+		 $130,0 \pm 0,5$ & $7,0 \pm 0,1$& $38,0 \pm 0,4$ & $1,78 \pm 0,06$\\
+		 \hline                         
+		 $140,0 \pm 0,5$ & $7,0 \pm 0,1$& $39,5 \pm 0,4$ & $1,77 \pm 0,06$\\
+		 \hline                         
+		 $150,0 \pm 0,5$ & $7,0 \pm 0,1$& $41,5 \pm 0,4$ & $1,72 \pm 0,06$\\
+		 \hline                         
+		 $160,0 \pm 0,5$ & $7,0 \pm 0,1$& $43,0 \pm 0,4$ & $1,71 \pm 0,06$\\
+		 \hline                         
+		 $170,0 \pm 0,5$ & $7,0 \pm 0,1$& $44,0 \pm 0,4$ & $1,73 \pm 0,06$\\
+		 \hline                         
+		 $180,0 \pm 0,5$ & $7,0 \pm 0,1$& $45,0 \pm 0,4$ & $1,75 \pm 0,06$\\
+		 \hline                         
+		 $190,0 \pm 0,5$ & $7,0 \pm 0,1$& $46,5 \pm 0,4$ & $1,73 \pm 0,06$\\
+		 \hline                         
+		 $200,0 \pm 0,5$ & $7,0 \pm 0,1$& $47,5 \pm 0,4$ & $1,75 \pm 0,06$\\
+		 \hline                         
+		 $210,0 \pm 0,5$ & $7,0 \pm 0,1$& $48,5 \pm 0,4$ & $1,76 \pm 0,06$\\
+		 \hline                         
+		 $220,0 \pm 0,5$ & $7,0 \pm 0,1$& $50,0 \pm 0,4$ & $1,74 \pm 0,06$\\
+		 \hline                         
+		 $230,0 \pm 0,5$ & $7,0 \pm 0,1$& $51,5 \pm 0,4$ & $1,71 \pm 0,06$\\
+		 \hline                         
+		 $240,0 \pm 0,5$ & $7,0 \pm 0,1$& $53,0 \pm 0,4$ & $1,68 \pm 0,05$\\
+		 \hline                         
+		 $250,0 \pm 0,5$ & $7,0 \pm 0,1$& $54,0 \pm 0,4$ & $1,69 \pm 0,05$\\
+		 \hline                         
+		 $120,0 \pm 0,5$ & $5,0 \pm 0,1$& $52,0 \pm 0,4$ & $1,72 \pm 0,07$\\
+		 \hline                         
+		 $130,0 \pm 0,5$ & $5,0 \pm 0,1$& $54,0 \pm 0,4$ & $1,72 \pm 0,07$\\
+		 \hline                         
+		 $140,0 \pm 0,5$ & $5,0 \pm 0,1$& $56,5 \pm 0,4$ & $1,70 \pm 0,07$\\
+		 \hline                         
+		 $150,0 \pm 0,5$ & $5,0 \pm 0,1$& $59,0 \pm 0,4$ & $1,67 \pm 0,07$\\
+		 \hline                         
+		 $160,0 \pm 0,5$ & $5,0 \pm 0,1$& $61,0 \pm 0,4$ & $1,66 \pm 0,07$\\
+		 \hline                         
+		 $170,0 \pm 0,5$ & $5,0 \pm 0,1$& $63,0 \pm 0,4$ & $1,66 \pm 0,07$\\
+		 \hline                         
+		 $140,0 \pm 0,5$ & $4,5 \pm 0,1$& $63,0 \pm 0,4$ & $1,68 \pm 0,08$\\
+		 \hline                         
+		 $140,0 \pm 0,5$ & $5,0 \pm 0,1$& $57,0 \pm 0,4$ & $1,67 \pm 0,07$\\
+		 \hline                         
+		 $140,0 \pm 0,5$ & $5,5 \pm 0,1$& $51,0 \pm 0,4$ & $1,72 \pm 0,07$\\
+		 \hline                         
+		 $140,0 \pm 0,5$ & $6,0 \pm 0,1$& $47,0 \pm 0,4$ & $1,70 \pm 0,06$\\
+		 \hline                         
+		 $140,0 \pm 0,5$ & $6,5 \pm 0,1$& $44,0 \pm 0,4$ & $1,65 \pm 0,06$\\
+		 \hline                         
+		 $140,0 \pm 0,5$ & $7,0 \pm 0,1$& $41,0 \pm 0,4$ & $1,64 \pm 0,06$\\
+		 \hline                         
+		 $140,0 \pm 0,5$ & $7,5 \pm 0,1$& $37,0 \pm 0,4$ & $1,76 \pm 0,06$\\
+		 \hline                         
+		 $140,0 \pm 0,5$ & $8,0 \pm 0,1$& $35,0 \pm 0,4$ & $1,73 \pm 0,06$\\
+		 \hline                         
+		 $140,0 \pm 0,5$ & $8,5 \pm 0,1$& $33,0 \pm 0,4$ & $1,72 \pm 0,06$\\
+		 \hline                         
+		 $140,0 \pm 0,5$ & $9,0 \pm 0,1$& $31,5 \pm 0,4$ & $1,68 \pm 0,06$\\
+		 \hline                         
+		 $140,0 \pm 0,5$ & $9,5 \pm 0,1$& $30,0 \pm 0,4$ & $1,67 \pm 0,06$\\
+		 \hline                         
+		 $160,0 \pm 0,5$ & $5,0 \pm 0,1$& $61,5 \pm 0,4$ & $1,64 \pm 0,07$\\
+		 \hline                         
+		 $160,0 \pm 0,5$ & $5,5 \pm 0,1$& $55,0 \pm 0,4$ & $1,69 \pm 0,07$\\
+		 \hline                         
+		 $160,0 \pm 0,5$ & $6,0 \pm 0,1$& $50,5 \pm 0,4$ & $1,68 \pm 0,06$\\
+		 \hline                         
+		 $160,0 \pm 0,5$ & $6,5 \pm 0,1$& $46,0 \pm 0,4$ & $1,73 \pm 0,06$\\
+		 \hline                         
+		 $160,0 \pm 0,5$ & $7,0 \pm 0,1$& $43,0 \pm 0,4$ & $1,71 \pm 0,06$\\
+		 \hline                         
+		 $160,0 \pm 0,5$ & $7,5 \pm 0,1$& $40,0 \pm 0,4$ & $1,72 \pm 0,06$\\
+		 \hline                         
+		 $160,0 \pm 0,5$ & $8,0 \pm 0,1$& $37,5 \pm 0,4$ & $1,72 \pm 0,06$\\
+		 \hline                         
+		 $160,0 \pm 0,5$ & $8,5 \pm 0,1$& $35,0 \pm 0,4$ & $1,75 \pm 0,06$\\
+		 \hline                         
+		 $160,0 \pm 0,5$ & $9,0 \pm 0,1$& $33,0 \pm 0,4$ & $1,75 \pm 0,06$\\
+		 \hline                         
+		 $160,0 \pm 0,5$ & $9,5 \pm 0,1$& $32,0 \pm 0,4$ & $1,67 \pm 0,05$\\
+		  \hline
+	  \end{tabular}
+	  \caption{Messreihen}
+	  \label{tbl:pythonmessung}
+  \end{table}
+Insgesamt ergibt sich aus der Tabelle \ref{tbl:pythonmessung} ein gewichteter Mittelwert von $(1.7104 \pm 0.0096)\si{\coulomb/\kilo\gram}$ über alle Messungen.
+Dies ergibt eine Abweichung vom Literaturwert\footnote{\url{http://physics.nist.gov/cgi-bin/cuu/Value?esme|search_for=electron+charge+to+mass, 11.9.2014, 14:15 Uhr}} $1.7588\si{\coulomb/\kilo\gram}$ von $3\%$
 
 \begin{figure}[!h]
 	\centering
-	\input{IConst}
+	\input{eric}
 	\caption{Durchmesser des Kreises gegen $\sqrt{\frac{U_\text{B}}{1\text V}}/\frac{I_\text{H}}{1\text A}$}
-	\label{fig:IConst}
+	\label{fig:eric}
 \end{figure}
-\begin{figure}[!h]
-	\centering
-	\input{UI}
-	\caption{Durchmesser des Kreises gegen $\sqrt{\frac{U_\text{B}}{1\text V}}/\frac{I_\text{H}}{1\text A}$}
-	\label{fig:UConst}
-\end{figure}
+
 
 \section{Diskussion}
 \label{sec:diskussion}
