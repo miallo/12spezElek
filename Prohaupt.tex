@@ -120,6 +120,10 @@
 %Links mit \href{www.abc.de}
 \usepackage{hyperref}
 
+%align nummerierung
+\numberwithin{equation}{section}
+
+
 \begin{document}
 \newpage
 \begin{titlepage}
@@ -169,17 +173,14 @@ Praktikant: &  Michael Lohmann\\
 Die spezifische Elektronenladung beschreibt das Verhältnis von Elementarladung $e$ zur Masse des Elektrons $m_e$.
 Für viele Versuche müssen die einzelnen Größen der Beiden nicht bekannt sein, sondern die spezifische Elektronenladung reicht aus.
 Auch kann damit zum Beispiel aus dem Millikan-Versuch die Elektronenladung bestimmen.
-Diese Naturkonstante wurde bereits *************************************************** (\cite[S. ]{gerthsen}) entdeckt.
-
-
 
 \section{Theorie}
 \label{sec:theorie}
-Das \emph{Coulombsche Gesetz} gibt nach \cite[S. 2]{demtroeder2} die Stärke der Kraft an, die auf zwei Ladungsträger wirkt.
-es lautet:
-\begin{align*}
-	\vec F_\text{el}=\frac{qQ}{4\pi\varepsilon_0}\frac{\vec r-\vec r_\text{Q}}{|\vec r-\vec r_\text{Q}|^3}\qquad\text{und}\qquad\vec E =\frac{\vec F_\text{el}}{q}
-\end{align*}
+%Das \emph{Coulombsche Gesetz} gibt nach \cite[S. 2]{demtroeder2} die Stärke der Kraft an, die auf zwei Ladungsträger wirkt.
+%es lautet:
+%\begin{align*}
+%	\vec F_\text{el}=\frac{qQ}{4\pi\varepsilon_0}\frac{\vec r-\vec r_\text{Q}}{|\vec r-\vec r_\text{Q}|^3}\qquad\text{und}\qquad\vec E =\frac{\vec F_\text{el}}{q}
+%\end{align*}
 
 
 \subsection{Helmholzspulen}
@@ -248,7 +249,7 @@ Aus Gleichung \eqref{eq:zentri} und \eqref{eq:Lorenz} ergibt sich durch Gleichse
 \label{sec:durchfuehrung}
 Es wird ein Glaskolben mit Restgas aufgebaut, in dem ein Fadenstrahlrohr befestigt ist.
 Ein Okular auf einer Messskala dient zur Vermessung des Bahnradius.
-Damit wird der Ausgang des Elektronenstrahls (der linke Rand) vermessen, sowie im weiteren Verlauf der rechte Rand.
+Damit wird der Ausgang des Elektronenstrahls (der linke Rand) vermessen, sowie im weiteren Verlauf der rechte Rand der Elektronenbahn.
 Man notiert vor den Messungen alle Spulendaten.\\
 Zunächst geht man in Schritten von $\Delta U_\text B=20\si{\volt}$ und $\Delta I=0.1\si{\ampere}$ grob die verschiedenen Einstellungen durch, um die überhaupt messbaren Bereiche einzuschränken.
 Aus diesen wählt man zwei Spulenströme, für die Messungen in einem möglichst großen Bereich von $U_\text B$ durchführbar sind.
@@ -377,6 +378,10 @@ Dies ergibt eine Abweichung vom Literaturwert\footnote{\url{http://physics.nist.
 
 \section{Diskussion}
 \label{sec:diskussion}
+Der in sich in dem Versuchsaufbau befindliche Wehneltzylinder sollte eigentlich zur bündelung des Elektronenstrahls diehnen.
+Da wir mit verschiedenen Spannungen an ihm jeedoch so gut wie kaum einen Unterschied der Bahn feststellen konnten, haben wir ihn nur verwendet, um die Beschleunigungsspannung genauer einzustellen.
+Dies ging, da eine veränderte Wehneltspannung auch eine leicht veränderte Beschleunigungsspannung hervorruft.
+
 
 \bibliography{literatur}
 \end{document}
