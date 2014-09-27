@@ -2,7 +2,7 @@ reset
 set terminal epslatex color
 set output 'IConst.tex'
 set xlabel '$\sqrt{\frac{U_\text{B}}{1\text V}}/\frac{I_\text{H}}{1\text A}$'
-set ylabel '$d$'
+set ylabel '$d\si{\ampere}$'
 set key top right
 
 f(x)=m*x+b
