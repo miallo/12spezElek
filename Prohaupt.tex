@@ -262,19 +262,20 @@ Abschließend müssen natürlich noch die angenommenen Fehler notiert werden.
 
 \section{Auswertung}
 \label{sec:auswertung}
+\subsection{$e/m_e$}
 \begin{figure}[!h]
 	\centering
 	\input{UI}
 	\caption{Durchmesser des Kreises gegen $\sqrt{\frac{U_\text{B}}{1\text V}}/\frac{I_\text{H}}{1\text A}$}
 	\label{fig:UI}
 \end{figure}
+
 In Abb. \ref{fig:UI} erkennt man einen linearen Zusammenhang.
 Dieser sollte sich auch nach Gleichung \eqref{eq:em} ergeben.\\
 Die Fehlerfortpflanzung dieser Gleichung aus der Gauß'schen Fehlerfortpflanzung lautet:
 \begin{align}
 \sigma_{e/m_e}=\frac{125R^2}{32\mu_0^{2}n^2}\sqrt{\sigma_{U}^2\left( \frac{1}{r^2I^2} \right)^2+\sigma_I^2\left( \frac{2U}{r^2I^3} \right)^2+\sigma_r^2\left( \frac{2U}{r^3I^2} \right)^2}
 \end{align}
-
 
 
 \begin{table}[h!]
@@ -378,12 +379,20 @@ Dies ergibt eine Abweichung vom Literaturwert\footnote{\url{http://physics.nist.
 	\caption{Durchmesser des Kreises gegen $\sqrt{\frac{U_\text{B}}{1\text V}}/\frac{I_\text{H}}{1\text A}$}
 	\label{fig:eric}
 \end{figure}
+\subsection{Berechnung der Flussdichte $B$}
+Mit Gleichung \eqref{eq:v} kann die Geschwindigkeit der Elektronen berechnet werden.
+Die magnetische Flussdichte $B$ berechnet sich nach \eqref{eq:ZgleichL}, was umgestellt nach $B$
+\begin{align*}
+B=\frac{m_ev}{er}
+\end{align*}
+ergibt.
+
 
 
 \section{Diskussion}
 \label{sec:diskussion}
 Der in sich in dem Versuchsaufbau befindliche Wehneltzylinder sollte eigentlich zur bündelung des Elektronenstrahls diehnen.
-Da wir mit verschiedenen Spannungen an ihm jeedoch so gut wie kaum einen Unterschied der Bahn feststellen konnten, haben wir ihn nur verwendet, um die Beschleunigungsspannung genauer einzustellen.
+Da wir mit verschiedenen Spannungen an ihm jedoch so gut wie kaum einen Unterschied der Bahn feststellen konnten, haben wir ihn nur verwendet, um die Beschleunigungsspannung genauer einzustellen.
 Dies ging, da eine veränderte Wehneltspannung auch eine leicht veränderte Beschleunigungsspannung hervorruft.\\
 Dass unsere Werte für $e/m_e$ tendentiell zu klein sind, könnte daran legen, dass ich beim Ablesen immer den am weitesten außen liegenden Rand der Flugbahn genommen habe.
 Hierbei wäre es wahrscheinlich sinnvoll gewesen, die ungefähre Mitte der Bahn zu betrachten.
