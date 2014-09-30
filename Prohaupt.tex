@@ -191,7 +191,7 @@ Dafür wird nicht eine unendlich (oder zumindest sehr) lange Spule verwendet, so
 Diese, welche für sich genommen nur ein inhomogenes Magnetfeld besitzen, sind in einer bestimmten Geometrie angeordnet, so dass sich auch mit ihnen gute Ergebnisse zumindest in kleinen Raumbereichen erzielen lassen.
 In einer Helmholzspule gilt nach \cite[S. 94, Gleichung 3.22c]{demtroeder2} für die Mitte der Spulen
 \begin{align}
-	B\approx\frac{8\mu_0I}{\sqrt{125}R}\label{eq:BHelm}
+	B\approx\frac{8\mu_0nI}{\sqrt{125}R}\label{eq:BHelm}
 \end{align}
 Dies wird erreicht, dass die mit der Entfernung schwächer werdenden Felder sich im Inneren des Paares idealerweise genau ausgleichen.
 Die sogenannte \textsc{Helmholz}-Bedingung beschreibt den Spulenabstand im Verhältnis zu ihrem Radius.
@@ -270,13 +270,15 @@ Abschließend müssen natürlich noch die angenommenen Fehler notiert werden.
 	\label{fig:UI}
 \end{figure}
 
-In Abb. \ref{fig:UI} erkennt man einen linearen Zusammenhang.
-Dieser sollte sich auch nach Gleichung \eqref{eq:em} ergeben.\\
-Die Fehlerfortpflanzung dieser Gleichung aus der Gauß'schen Fehlerfortpflanzung lautet:
+In Abb. \ref{fig:UI} erkennt man einen linearen Zusammenhang zwischen $\sqrt{U_\text{B}}/I_\text{H}$ und $d$.
+Dieser sollte sich auch nach Gleichung \eqref{eq:em} ergeben.
+Dies deutet schon einmal darauf hin, dass unsere Messwerte nicht vollkommen falsch sind.\\
+Die Fehlerfortpflanzung eben dieser Gleichung aus der Gauß'schen Fehlerfortpflanzung lautet:
 \begin{align}
 \sigma_{e/m_e}=\frac{125R^2}{32\mu_0^{2}n^2}\sqrt{\sigma_{U}^2\left( \frac{1}{r^2I^2} \right)^2+\sigma_I^2\left( \frac{2U}{r^2I^3} \right)^2+\sigma_r^2\left( \frac{2U}{r^3I^2} \right)^2}
+\label{eq:sigmaEdM}
 \end{align}
-
+Diese Fehler wurden in allen Berechnungen der spezifischen Elektronenladung verwendet.
 
 \begin{table}[h!]
 	\centering
@@ -370,8 +372,8 @@ Die Fehlerfortpflanzung dieser Gleichung aus der Gauß'schen Fehlerfortpflanzung
 	  \caption{Messreihen}
 	  \label{tbl:pythonmessung}
   \end{table}
-Insgesamt ergibt sich aus der Tabelle \ref{tbl:pythonmessung} ein gewichteter Mittelwert von $(1.7104 \pm 0.0096)\si{\coulomb/\kilo\gram}$ über alle Messungen.
-Dies ergibt eine Abweichung vom Literaturwert\footnote{\url{http://physics.nist.gov/cgi-bin/cuu/Value?esme|search_for=electron+charge+to+mass, 11.9.2014, 14:15 Uhr}} $1.7588\si{\coulomb/\kilo\gram}$ von $3\%$
+Insgesamt ergibt sich aus der Tabelle \ref{tbl:pythonmessung} ein gewichteter Mittelwert von $(1.7104 \pm 0.0096)\times 10^{11}\si{\coulomb/\kilo\gram}$ über alle Messungen.
+Dies ergibt eine Abweichung vom Literaturwert\footnote{\url{http://physics.nist.gov/cgi-bin/cuu/Value?esme|search_for=electron+charge+to+mass}, 11.9.2014, 14:15 Uhr} $(1.7588\times 10^{11}\si{\coulomb/\kilo\gram}$ von $3\%$
 
 \begin{figure}[!h]
 	\centering
@@ -383,18 +385,24 @@ Dies ergibt eine Abweichung vom Literaturwert\footnote{\url{http://physics.nist.
 Mit Gleichung \eqref{eq:v} kann die Geschwindigkeit der Elektronen berechnet werden.
 Die magnetische Flussdichte $B$ berechnet sich nach \eqref{eq:ZgleichL}, was umgestellt nach $B$
 \begin{align*}
-B=\frac{m_ev}{er}
+B&=\sqrt{\frac{2\cdot U}{\frac{e}{m_e} \cdot r^{2}}}\label{eq:B}\\
+\sigma_B&=\frac{1}{2 \cdot \sqrt{\frac{e}{m_e}} \cdot r} \cdot \sqrt{\frac{8}{r^{2}} \cdot U \cdot \sigma_{r}^{2} + \frac{2}{U} \cdot \sigma_{U}^{2} + \frac{2}{\frac{e}{m_e}^{2}} \cdot U \cdot \sigma_{\frac{e}{m_e}}^{2}}
 \end{align*}
 ergibt.
+Als $e/m_e$ nahmen wir für die Berechnung den Wert aus dem kleinsten Radius, da dieser theoretisch am genausten sein müsste.
+Dieser ist $e/m_e=(1.67\pm0.06)\times 10^{11}\;$C/kg.
+Daraus ergibt sich ein Wert von $B_\text{exp}=(1.36 \pm 0.09)\,$mT.
 
+Der theoretische Wert sollte $B_\text{theo}=(1.42 \pm 0.01)\,$mT betragen und errechnet sich aus Gleichung \eqref{eq:BHelm}.
+Es ergibt sich so eine Abweichung von 4\%.
 
 
 \section{Diskussion}
 \label{sec:diskussion}
-Der in sich in dem Versuchsaufbau befindliche Wehneltzylinder sollte eigentlich zur bündelung des Elektronenstrahls diehnen.
+Der in sich in dem Versuchsaufbau befindliche Wehneltzylinder sollte eigentlich zur Bündelung des Elektronenstrahls diehnen.
 Da wir mit verschiedenen Spannungen an ihm jedoch so gut wie kaum einen Unterschied der Bahn feststellen konnten, haben wir ihn nur verwendet, um die Beschleunigungsspannung genauer einzustellen.
 Dies ging, da eine veränderte Wehneltspannung auch eine leicht veränderte Beschleunigungsspannung hervorruft.\\
-Dass unsere Werte für $e/m_e$ tendentiell zu klein sind, könnte daran legen, dass ich beim Ablesen immer den am weitesten außen liegenden Rand der Flugbahn genommen habe.
+Dass unsere Werte für $e/m_e$ tendentiell zu klein sind, könnte daran legen, dass wir beim Ablesen immer den am weitesten außen liegenden Rand der Flugbahn genommen habe.
 Hierbei wäre es wahrscheinlich sinnvoll gewesen, die ungefähre Mitte der Bahn zu betrachten.
 Dadurch wäre die berechntete spezifische Elektronenladung größer geworden.
 
