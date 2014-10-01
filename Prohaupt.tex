@@ -382,18 +382,20 @@ Dies ergibt eine Abweichung vom Literaturwert\footnote{\url{http://physics.nist.
 	\label{fig:eric}
 \end{figure}
 \subsection{Berechnung der Flussdichte $B$}
+Die folgenden Berechnungen wurden mit dem Wertepaar $U=(140,0 \pm 0,5)\,$V, $I=(9,5 \pm 0,1)\,$A, $r=(30,0 \pm 0,4)\,$mm, $e/m_e=(1,67 \pm 0,06)\times10^{11}\,$C/kg berechnet.\\
 Mit Gleichung \eqref{eq:v} kann die Geschwindigkeit der Elektronen berechnet werden.
 Die magnetische Flussdichte $B$ berechnet sich nach \eqref{eq:ZgleichL}, was umgestellt nach $B$
 \begin{align*}
-B&=\sqrt{\frac{2\cdot U}{\frac{e}{m_e} \cdot r^{2}}}\label{eq:B}\\
-\sigma_B&=\frac{1}{2 \cdot \sqrt{\frac{e}{m_e}} \cdot r} \cdot \sqrt{\frac{8}{r^{2}} \cdot U \cdot \sigma_{r}^{2} + \frac{2}{U} \cdot \sigma_{U}^{2} + \frac{2}{\frac{e}{m_e}^{2}} \cdot U \cdot \sigma_{\frac{e}{m_e}}^{2}}
+B_\text{exp}&=\sqrt{\frac{2\cdot U}{\frac{e}{m_e} \cdot r^{2}}}\label{eq:B}\\
+\sigma_{B_\text{exp}}&=\frac{1}{2 \cdot \sqrt{\frac{e}{m_e}} \cdot r} \cdot \sqrt{\frac{8}{r^{2}} \cdot U \cdot \sigma_{r}^{2} + \frac{2}{U} \cdot \sigma_{U}^{2} + \frac{2}{\frac{e}{m_e}^{2}} \cdot U \cdot \sigma_{\frac{e}{m_e}}^{2}}
 \end{align*}
 ergibt.
 Als $e/m_e$ nahmen wir für die Berechnung den Wert aus dem kleinsten Radius, da dieser theoretisch am genausten sein müsste.
 Dieser ist $e/m_e=(1.67\pm0.06)\times 10^{11}\;$C/kg.
 Daraus ergibt sich ein Wert von $B_\text{exp}=(1.36 \pm 0.09)\,$mT.
 
-Der theoretische Wert sollte $B_\text{theo}=(1.42 \pm 0.01)\,$mT betragen und errechnet sich aus Gleichung \eqref{eq:BHelm}.
+Der theoretische Wert sollte $B_\text{theo}=(1.42 \pm 0.01)\,$mT betragen und errechnet sich aus Gleichung \eqref{eq:BHelm} mit der Fehlerformel
+$$\sigma_{B_\text{theo}}=\frac{8 \cdot n \cdot \mu_{0}}{25 \cdot R} \cdot \sqrt{5} \cdot \sigma_{I}\, .$$
 Es ergibt sich so eine Abweichung von 4\%.
 
 
