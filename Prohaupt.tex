@@ -3,7 +3,7 @@
 % Näheres zu "scrartcl" bzw. "scrreprt" und "scrbook" siehe KOMA-Skript Doku
 \documentclass[12pt,a4paper,titlepage,headinclude,bibtotoc]{scrartcl}
 
-
+\usepackage{adjustbox}
 %---- Allgemeine Layout Einstellungen ------------------------------------------
 
 % Für Kopf und Fußzeilen, siehe auch KOMA-Skript Doku
@@ -245,9 +245,10 @@ Aus Gleichung \eqref{eq:zentri} und \eqref{eq:Lorenz} ergibt sich durch Gleichse
 
 
 
+\newpage
 \section{Durchführung}
 \label{sec:durchfuehrung}
-Es wird ein Glaskolben mit Restgas aufgebaut, in dem ein Fadenstrahlrohr befestigt ist.
+Es wird wie in Abb. \ref{fig:aufbau} ein Glaskolben mit Restgas aufgebaut, in dem ein Fadenstrahlrohr befestigt ist.
 Ein Okular auf einer Messskala dient zur Vermessung des Bahnradius.
 Damit wird der Ausgang des Elektronenstrahls (der linke Rand) vermessen, sowie im weiteren Verlauf der rechte Rand der Elektronenbahn.
 Man notiert vor den Messungen alle Spulendaten.\\
@@ -257,7 +258,12 @@ Für jeweils einen festen Parameter wird nun der andere systematisch untersucht.
 Die Gesamtzahl aller Messungen sollte mindestens 25 betragen.\\
 Abschließend müssen natürlich noch die angenommenen Fehler notiert werden.
 
-
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{aufbau}
+	\caption{Versuchsaufbau nach \cite{LP}}
+	\label{fig:aufbau}
+\end{figure}
 
 
 \section{Auswertung}
@@ -265,7 +271,7 @@ Abschließend müssen natürlich noch die angenommenen Fehler notiert werden.
 \subsection{$e/m_e$}
 \begin{figure}[!h]
 	\centering
-	\input{UI}
+	\adjustbox{width=0.7\linewidth}{\input{UI}}
 	\caption{Durchmesser des Kreises gegen $\sqrt{\frac{U_\text{B}}{1\text V}}/\frac{I_\text{H}}{1\text A}$}
 	\label{fig:UI}
 \end{figure}
@@ -377,7 +383,7 @@ Dies ergibt eine Abweichung vom Literaturwert\footnote{\url{http://physics.nist.
 
 \begin{figure}[!h]
 	\centering
-	\input{eric}
+	\adjustbox{width=0.8\linewidth}{\input{eric}}
 	\caption{Durchmesser des Kreises gegen $\sqrt{\frac{U_\text{B}}{1\text V}}/\frac{I_\text{H}}{1\text A}$}
 	\label{fig:eric}
 \end{figure}
@@ -399,6 +405,7 @@ $$\sigma_{B_\text{theo}}=\frac{8 \cdot n \cdot \mu_{0}}{25 \cdot R} \cdot \sqrt{
 Es ergibt sich so eine Abweichung von 4\%.
 
 
+\newpage
 \section{Diskussion}
 \label{sec:diskussion}
 Der in sich in dem Versuchsaufbau befindliche Wehneltzylinder sollte eigentlich zur Bündelung des Elektronenstrahls diehnen.
@@ -406,7 +413,12 @@ Da wir mit verschiedenen Spannungen an ihm jedoch so gut wie kaum einen Untersch
 Dies ging, da eine veränderte Wehneltspannung auch eine leicht veränderte Beschleunigungsspannung hervorruft.\\
 Dass unsere Werte für $e/m_e$ tendentiell zu klein sind, könnte daran legen, dass wir beim Ablesen immer den am weitesten außen liegenden Rand der Flugbahn genommen habe.
 Hierbei wäre es wahrscheinlich sinnvoll gewesen, die ungefähre Mitte der Bahn zu betrachten.
-Dadurch wäre die berechntete spezifische Elektronenladung größer geworden.
+Dadurch wäre die berechntete spezifische Elektronenladung größer geworden.\\
+Die Elektronenbahn war auch nicht immer klar zu erkennen, da es im Raum zu hell war.
+Nach einiger Zeit gingen wir so dazu über, ein dunkles Kleidungsstück über die Röhre zu legen.
+Durch den größeren Kontrast war die Bahn besser zu erkennen.
+Dies ist auch für spätere Durchführungen zu empfehlen.
+Allerdings ist dabei darauf zu achten, dass der Stoff nicht elektrostatisch aufgeladen ist, da dies die Bahn der Elektronen stark beeinflussen könnte.
 
 
 
